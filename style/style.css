@@ -36,10 +36,63 @@ img {
   height: auto;
 }
 
+@font-face {
+  font-family: "Hack";
+  src: url("../assets/fonts/Hack-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("../assets/fonts/Hack-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("../assets/fonts/Hack-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Hack";
+  src: url("../assets/fonts/Hack-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  font-family: "Hack", "Courier New", monospace;
+}
+
 #opening {
   display: flex;
   height: 100vh;
   width: 100%;
   background: url("../assets/background.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+#opening #opening-content {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#opening #opening-content h1,
+#opening #opening-content p {
+  font-weight: bold;
+  width: 100%;
+}
+#opening #opening-content h1 {
+  word-spacing: -1.5rem;
+  letter-spacing: -0.2rem;
+  font-size: 4.4rem;
+  margin-bottom: 2rem;
+}
+#opening #opening-content p {
+  letter-spacing: 0.02rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
