@@ -1,0 +1,10 @@
+// A minimalistic reset
+@use 'reset';
+
+#opening {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
