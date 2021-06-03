@@ -1,0 +1,12 @@
+@use "../variables" as *;
+@use "../typography";
+
+html {
+  font-family: "Hack", "Courier New", monospace;
+  color: $white;
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
