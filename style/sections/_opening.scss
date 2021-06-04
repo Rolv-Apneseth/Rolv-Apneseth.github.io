@@ -13,7 +13,6 @@
   background-size: cover;
 
   #opening-content {
-    width: 100%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -21,9 +20,23 @@
     justify-content: center;
     text-align: center;
 
+    #opening-header {
+      &:after {
+        content: "";
+        height: $introBarThickness;
+        border-bottom: $introBarThickness solid $white;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: introductionBar $introBarDuration $introBarTiming;
+      }
+    }
+
     .wrapper {
+      position: relative;
       overflow: hidden;
-      margin-bottom: 2rem;
+      padding: 1rem 0;
       width: 100%;
     }
 
@@ -32,7 +45,9 @@
       word-spacing: -1.5rem;
       letter-spacing: -0.2rem;
       font-size: 4.4rem;
-      animation: spawnUp $spawnDuration $spawnTiming;
+      transform: translateY(120%);
+      animation: spawnUp $spawnDuration $spawnTiming $introBarDuration/3;
+      animation-fill-mode: forwards;
     }
 
     p {
@@ -40,7 +55,9 @@
       letter-spacing: 0.02rem;
       font-size: 1.5rem;
       text-transform: uppercase;
-      animation: spawnDown $spawnDuration $spawnTiming;
+      transform: translateY(-200%);
+      animation: spawnDown $spawnDuration $spawnTiming $introBarDuration/3;
+      animation-fill-mode: forwards;
     }
   }
 

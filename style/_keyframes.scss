@@ -1,6 +1,6 @@
 @keyframes spawnUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(120%);
   }
 
   100% {
@@ -10,10 +10,32 @@
 
 @keyframes spawnDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes introductionBar {
+  0% {
+    width: 0;
+  }
+
+  35% {
+    width: 150%;
+  }
+
+  50% {
+    width: 150%;
+  }
+
+  65% {
+    width: 150%;
+  }
+
+  100% {
+    width: 0;
   }
 }

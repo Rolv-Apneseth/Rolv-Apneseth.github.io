@@ -71,7 +71,7 @@ html a {
 
 @-webkit-keyframes spawnUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(120%);
   }
   100% {
     transform: translateY(0);
@@ -80,7 +80,7 @@ html a {
 
 @keyframes spawnUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(120%);
   }
   100% {
     transform: translateY(0);
@@ -88,7 +88,7 @@ html a {
 }
 @-webkit-keyframes spawnDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   100% {
     transform: translateY(0);
@@ -96,10 +96,44 @@ html a {
 }
 @keyframes spawnDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
   }
   100% {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes introductionBar {
+  0% {
+    width: 0;
+  }
+  35% {
+    width: 150%;
+  }
+  50% {
+    width: 150%;
+  }
+  65% {
+    width: 150%;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes introductionBar {
+  0% {
+    width: 0;
+  }
+  35% {
+    width: 150%;
+  }
+  50% {
+    width: 150%;
+  }
+  65% {
+    width: 150%;
+  }
+  100% {
+    width: 0;
   }
 }
 #opening {
@@ -113,7 +147,6 @@ html a {
   background-size: cover;
 }
 #opening #opening-content {
-  width: 100%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -121,9 +154,21 @@ html a {
   justify-content: center;
   text-align: center;
 }
+#opening #opening-content #opening-header:after {
+  content: "";
+  height: 0.1rem;
+  border-bottom: 0.1rem solid #e6e6e6;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: introductionBar 1000ms ease-in-out;
+          animation: introductionBar 1000ms ease-in-out;
+}
 #opening #opening-content .wrapper {
+  position: relative;
   overflow: hidden;
-  margin-bottom: 2rem;
+  padding: 1rem 0;
   width: 100%;
 }
 #opening #opening-content h1 {
@@ -131,16 +176,22 @@ html a {
   word-spacing: -1.5rem;
   letter-spacing: -0.2rem;
   font-size: 4.4rem;
-  -webkit-animation: spawnUp 500ms ease-in;
-          animation: spawnUp 500ms ease-in;
+  transform: translateY(120%);
+  -webkit-animation: spawnUp 300ms ease-out 333.3333333333ms;
+          animation: spawnUp 300ms ease-out 333.3333333333ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #opening #opening-content p {
   font-weight: bold;
   letter-spacing: 0.02rem;
   font-size: 1.5rem;
   text-transform: uppercase;
-  -webkit-animation: spawnDown 500ms ease-in;
-          animation: spawnDown 500ms ease-in;
+  transform: translateY(-200%);
+  -webkit-animation: spawnDown 300ms ease-out 333.3333333333ms;
+          animation: spawnDown 300ms ease-out 333.3333333333ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 #opening #opening-scroll {
   margin-bottom: 1rem;

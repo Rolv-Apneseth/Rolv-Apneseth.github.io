@@ -1,6 +1,11 @@
 // Colours
 $white: hsl(0, 0%, 90%);
 
+// Measurements
+$introBarThickness: 0.1rem;
+
 // Animations
-$spawnDuration: 500ms;
-$spawnTiming: ease-in;
+$spawnDuration: 300ms;
+$spawnTiming: ease-out;
+$introBarDuration: 1000ms;
+$introBarTiming: ease-in-out;
