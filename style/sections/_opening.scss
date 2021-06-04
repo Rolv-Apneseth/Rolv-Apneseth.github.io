@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../keyframes" as *;
 
 #opening {
   display: flex;
@@ -20,23 +21,26 @@
     justify-content: center;
     text-align: center;
 
-    h1,
-    p {
-      font-weight: bold;
+    .wrapper {
+      overflow: hidden;
+      margin-bottom: 2rem;
       width: 100%;
     }
 
     h1 {
+      font-weight: bold;
       word-spacing: -1.5rem;
       letter-spacing: -0.2rem;
       font-size: 4.4rem;
-      margin-bottom: 2rem;
+      animation: spawnUp $spawnDuration $spawnTiming;
     }
 
     p {
+      font-weight: bold;
       letter-spacing: 0.02rem;
       font-size: 1.5rem;
       text-transform: uppercase;
+      animation: spawnDown $spawnDuration $spawnTiming;
     }
   }
 
