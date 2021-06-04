@@ -72,9 +72,14 @@
       letter-spacing: 0.02rem;
       font-weight: bold;
       font-size: 0.85rem;
+      animation: bounceDown $bounceUpDuration $bounceUpTiming $introBarDuration *
+        1.5;
 
       img {
         height: 2.5rem;
+        animation: bounceDown $bounceUpDuration $bounceUpTiming
+          $introBarDuration * 1.5;
+        animation-iteration-count: 2;
       }
     }
   }
