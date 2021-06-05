@@ -1,0 +1,40 @@
+@use "../variables" as *;
+
+#about {
+  #about-text,
+  #about-header {
+    width: 60%;
+  }
+
+  #about-header {
+    h3 {
+      font-weight: bold;
+      font-size: $sectionHeaderFontSize * 0.38;
+    }
+  }
+
+  .wrapper {
+    height: min-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    img {
+      margin-left: $sectionXPadding;
+      margin-top: -$sectionYPadding * 1.5;
+      width: $profileMaxSize;
+      border-radius: 50%;
+    }
+
+    #about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      p {
+        margin-bottom: $paragraphSpacing;
+      }
+    }
+  }
+}

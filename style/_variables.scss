@@ -1,8 +1,17 @@
 // Colours
 $white: hsl(0, 0%, 90%);
+$baseBackgroundColour: hsl(210, 7%, 12%);
+$highlightColour: hsl(41, 78%, 60%);
 
 // Measurements
 $introBarThickness: 0.1rem;
+$baseFontSize: 1.1rem;
+$sectionHeaderFontSize: 3.3rem;
+$sectionHeaderPadding: 1.5rem;
+$sectionYPadding: 6rem;
+$sectionXPadding: 3rem;
+$profileMaxSize: 30rem;
+$paragraphSpacing: 1rem;
 
 // Animations
 $spawnDuration: 300ms;

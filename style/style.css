@@ -63,10 +63,34 @@ img {
 html {
   font-family: "Hack", "Courier New", monospace;
   color: #e6e6e6;
+  background-color: #1c1f21;
+}
+html p {
+  font-size: 1.1rem;
 }
 html a {
   text-decoration: none;
   color: #e6e6e6;
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: 3.3rem;
+  padding-bottom: 1.5rem;
+}
+
+.section-header-underline {
+  margin: 1.5rem 0;
+  display: inline-block;
+  width: 10%;
+  height: 0.05rem;
+  background-color: #e9b649;
+}
+
+section:not(#opening) {
+  width: 95%;
+  margin: auto;
+  padding: 6rem 3rem;
 }
 
 @-webkit-keyframes spawnUp {
@@ -241,4 +265,36 @@ html a {
           animation: bounceDown 500ms ease-out 1500ms;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
+}
+
+#about #about-text,
+#about #about-header {
+  width: 60%;
+}
+#about #about-header h3 {
+  font-weight: bold;
+  font-size: 1.254rem;
+}
+#about .wrapper {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#about .wrapper img {
+  margin-left: 3rem;
+  margin-top: -9rem;
+  width: 30rem;
+  border-radius: 50%;
+}
+#about .wrapper #about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#about .wrapper #about-text p {
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=style.css.map */

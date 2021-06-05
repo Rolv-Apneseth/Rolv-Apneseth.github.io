@@ -4,9 +4,34 @@
 html {
   font-family: "Hack", "Courier New", monospace;
   color: $white;
+  background-color: $baseBackgroundColour;
+
+  p {
+    font-size: $baseFontSize;
+  }
 
   a {
     text-decoration: none;
     color: $white;
   }
+}
+
+.section-header {
+  font-weight: bold;
+  font-size: $sectionHeaderFontSize;
+  padding-bottom: $sectionHeaderPadding;
+}
+
+.section-header-underline {
+  margin: $sectionHeaderPadding 0;
+  display: inline-block;
+  width: 10%;
+  height: $introBarThickness / 2;
+  background-color: $highlightColour;
+}
+
+section:not(#opening) {
+  width: 95%;
+  margin: auto;
+  padding: $sectionYPadding $sectionXPadding;
 }
