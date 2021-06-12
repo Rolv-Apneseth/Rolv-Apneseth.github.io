@@ -63,7 +63,6 @@ img {
 html {
   font-family: "Hack", "Courier New", monospace;
   color: #e6e6e6;
-  background-color: #1c1f21;
 }
 html p {
   font-size: 1.05rem;
@@ -76,21 +75,27 @@ html a {
 .section-header {
   font-weight: bold;
   font-size: 3.3rem;
-  padding-bottom: 1.5rem;
 }
 
 .section-header-underline {
   margin: 1.5rem 0;
   display: inline-block;
-  width: 10%;
+  width: 8rem;
   height: 0.05rem;
   background-color: #e9b649;
 }
 
 section:not(#opening) {
-  width: 95%;
-  margin: auto;
-  padding: 6rem 3rem;
+  width: 100%;
+  padding: 6rem 9rem;
+}
+
+section:nth-of-type(even) {
+  background-color: #181a1b;
+}
+
+section:nth-of-type(odd) {
+  background-color: #212426;
 }
 
 @-webkit-keyframes spawnUp {
@@ -274,6 +279,7 @@ section:not(#opening) {
 #about #about-header h3 {
   font-weight: bold;
   font-size: 1.254rem;
+  margin-top: 1.5rem;
 }
 #about .wrapper {
   height: -webkit-min-content;
@@ -297,4 +303,42 @@ section:not(#opening) {
 }
 #about .wrapper #about-text p {
   margin-bottom: 1rem;
+}
+
+#skills #skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  grid-gap: 2.5rem;
+}
+#skills #skills-container .skill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 10rem;
+}
+#skills #skills-container .skill img {
+  width: 7rem;
+  margin-bottom: 0.5rem;
+  transition: transform 400ms;
+}
+#skills #skills-container .skill p {
+  font-size: 0.9975rem;
+  font-weight: bold;
+}
+@media (hover) {
+  #skills #skills-container .skill p {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 400ms, opacity 400ms linear;
+  }
+  #skills #skills-container .skill:hover p {
+    transform: translateY(-0.5rem);
+    opacity: 1;
+  }
+  #skills #skills-container .skill:hover img {
+    transform: translateY(-0.5rem);
+  }
 }/*# sourceMappingURL=style.css.map */

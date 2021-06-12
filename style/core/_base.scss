@@ -4,7 +4,6 @@
 html {
   font-family: "Hack", "Courier New", monospace;
   color: $white;
-  background-color: $baseBackgroundColour;
 
   p {
     font-size: $baseFontSize;
@@ -19,19 +18,25 @@ html {
 .section-header {
   font-weight: bold;
   font-size: $sectionHeaderFontSize;
-  padding-bottom: $sectionHeaderPadding;
 }
 
 .section-header-underline {
-  margin: $sectionHeaderPadding 0;
+  margin: $sectionHeaderSpacing 0;
   display: inline-block;
-  width: 10%;
+  width: $sectionHeaderUnderline;
   height: $introBarThickness / 2;
   background-color: $highlightColour;
 }
 
 section:not(#opening) {
-  width: 95%;
-  margin: auto;
-  padding: $sectionYPadding $sectionXPadding;
+  width: 100%;
+  padding: $sectionYPadding $sectionXPadding * 3;
+}
+
+// Alternating background colours
+section:nth-of-type(even) {
+  background-color: $baseBackgroundColour;
+}
+section:nth-of-type(odd) {
+  background-color: $baseBackgroundColourLighter;
 }

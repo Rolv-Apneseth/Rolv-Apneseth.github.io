@@ -1,17 +1,23 @@
 // Colours
 $white: hsl(0, 0%, 90%);
-$baseBackgroundColour: hsl(210, 7%, 12%);
+$baseBackgroundColour: hsl(210, 7%, 10%);
+$baseBackgroundColourLighter: hsl(210, 7%, 14%);
 $highlightColour: hsl(41, 78%, 60%);
 
 // Measurements
 $introBarThickness: 0.1rem;
 $baseFontSize: 1.05rem;
 $sectionHeaderFontSize: 3.3rem;
-$sectionHeaderPadding: 1.5rem;
+$sectionHeaderSpacing: 1.5rem;
+$sectionHeaderUnderline: 8rem;
 $sectionYPadding: 6rem;
 $sectionXPadding: 3rem;
 $profileMaxSize: 30rem;
 $paragraphSpacing: 1rem;
+$skillsSpacing: 2.5rem;
+$skillsImageMargin: 0.5rem;
+$skillsImageWidth: 7rem;
+$skillsColumnMinWidth: $skillsSpacing + $skillsSpacing * 2;
 
 // Animations
 $spawnDuration: 300ms;
@@ -20,3 +26,4 @@ $introBarDuration: 1000ms;
 $introBarTiming: ease-in-out;
 $bounceUpDuration: 500ms;
 $bounceUpTiming: ease-out;
+$skillsTransitionDuration: 400ms;
