@@ -95,7 +95,7 @@ section:nth-of-type(even) {
 }
 
 section:nth-of-type(odd) {
-  background-color: #212426;
+  background-color: #2d3034;
 }
 
 @-webkit-keyframes spawnUp {
