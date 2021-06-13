@@ -87,7 +87,27 @@ html a {
 
 section:not(#opening) {
   width: 100%;
-  padding: 6rem 9rem;
+  padding: 6rem 1.5rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  section:not(#opening) {
+    padding: 6rem 3rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  section:not(#opening) {
+    padding: 6rem 4.5rem;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1949px) {
+  section:not(#opening) {
+    padding: 6rem 6rem;
+  }
+}
+@media (min-width: 1950px) {
+  section:not(#opening) {
+    padding: 6rem 18rem;
+  }
 }
 
 section:nth-of-type(even) {
@@ -291,7 +311,7 @@ section:nth-of-type(odd) {
   align-items: flex-start;
 }
 #about .wrapper img {
-  margin-left: 3rem;
+  margin-left: 1.5rem;
   margin-top: -9rem;
   width: 30rem;
   border-radius: 50%;

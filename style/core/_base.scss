@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../mediaQueries" as *;
 @use "../typography";
 
 html {
@@ -30,7 +31,23 @@ html {
 
 section:not(#opening) {
   width: 100%;
-  padding: $sectionYPadding $sectionXPadding * 3;
+  padding: $sectionYPadding $sectionXPadding;
+
+  @include tablet {
+    padding: $sectionYPadding $sectionXPadding * 2;
+  }
+
+  @include desktopSmall {
+    padding: $sectionYPadding $sectionXPadding * 3;
+  }
+
+  @include desktopMedium {
+    padding: $sectionYPadding $sectionXPadding * 4;
+  }
+
+  @include desktopLarge {
+    padding: $sectionYPadding $sectionXPadding * 12;
+  }
 }
 
 // Alternating background colours
