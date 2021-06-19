@@ -17,16 +17,18 @@ html {
 }
 
 .section-header {
-  font-weight: bold;
-  font-size: $sectionHeaderFontSize;
-}
+  h2 {
+    font-weight: bold;
+    font-size: $sectionHeaderFontSize;
+  }
 
-.section-header-underline {
-  margin: $sectionHeaderSpacing 0;
-  display: inline-block;
-  width: $sectionHeaderUnderlineWidth;
-  height: $sectionHeaderUnderlineHeight;
-  background-color: $highlightColour;
+  span {
+    margin: $sectionHeaderSpacing 0;
+    display: inline-block;
+    width: $sectionHeaderUnderlineWidth;
+    height: $sectionHeaderUnderlineHeight;
+    background-color: $highlightColour;
+  }
 }
 
 section:not(#opening) {
