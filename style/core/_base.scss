@@ -24,8 +24,8 @@ html {
 .section-header-underline {
   margin: $sectionHeaderSpacing 0;
   display: inline-block;
-  width: $sectionHeaderUnderline;
-  height: $introBarThickness / 2;
+  width: $sectionHeaderUnderlineWidth;
+  height: $sectionHeaderUnderlineHeight;
   background-color: $highlightColour;
 }
 
