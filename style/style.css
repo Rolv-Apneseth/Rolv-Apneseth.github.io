@@ -72,16 +72,15 @@ html a {
   color: #e6e6e6;
 }
 
-.section-header {
+.section-header h2 {
   font-weight: bold;
   font-size: 3.3rem;
 }
-
-.section-header-underline {
+.section-header span {
   margin: 1.5rem 0;
   display: inline-block;
   width: 8rem;
-  height: 0.05rem;
+  height: 0.06rem;
   background-color: #e9b649;
 }
 
@@ -361,4 +360,85 @@ section:nth-of-type(odd) {
   #skills #skills-container .skill:hover img {
     transform: translateY(-0.5rem);
   }
+}
+
+#projects #projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.8rem;
+  -moz-column-gap: 3.6rem;
+       column-gap: 3.6rem;
+}
+@media (min-width: 1950px) {
+  #projects #projects-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#projects .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  overflow: hidden;
+}
+@media (min-width: 1200px) and (max-width: 1949px) {
+  #projects .project {
+    grid-template-columns: 1fr 1.4fr;
+  }
+}
+#projects .project iframe {
+  width: 100%;
+  height: 20rem;
+  border-radius: 1rem;
+}
+#projects .project .project-content {
+  max-height: 20rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+}
+#projects .project .project-content > * {
+  margin-bottom: 0.45rem;
+}
+#projects .project h3 {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+#projects .project .project-techs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#projects .project .project-techs > * {
+  font-weight: bold;
+  font-size: 0.735rem;
+  padding: 0.4rem;
+  margin-right: 0.4rem;
+  background-color: #2d3034;
+  border-radius: 0.4rem;
+}
+#projects .project .project-summary {
+  font-size: 1.155rem;
+}
+#projects .project .project-links {
+  margin-top: 0.9rem;
+}
+#projects .project .project-links a {
+  display: inline-block;
+  border-radius: 0.5rem;
+  background-color: #0275d9;
+  margin: 0.4rem 0;
+  padding: 0.4rem 0.8rem;
+  font-weight: bold;
+  font-size: 1.155rem;
+  transition-property: background-color, transform;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+#projects .project .project-links a:hover {
+  background-color: #0388fc;
+}
+#projects .project .project-links a:active, #projects .project .project-links a:focus {
+  transform: translateY(5%);
+  background-color: #0267c0;
 }/*# sourceMappingURL=style.css.map */

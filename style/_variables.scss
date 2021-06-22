@@ -19,6 +19,14 @@ $skillsSpacing: 2.5rem;
 $skillsImageMargin: 0.5rem;
 $skillsImageWidth: 7rem;
 $skillsColumnMinWidth: $skillsSpacing + $skillsSpacing * 2;
+$projectsHeaderFontSize: 2.2rem;
+$projectsSpacing: 0.9rem;
+$projectsFontSize: $baseFontSize * 1.1;
+$projectsTagsFontSize: $baseFontSize * 0.7;
+$projectsTagsSpacing: 0.4rem;
+$projectsLinksBackground: hsl(208, 98, 43);
+$projectsLinksBackgroundHover: hsl(208, 98, 50);
+$projectsLinksPadding: 0.4rem;
 
 // Animations
 $spawnDuration: 300ms;

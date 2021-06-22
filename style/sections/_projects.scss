@@ -1,0 +1,96 @@
+@use "../variables" as *;
+@use "../mediaQueries" as *;
+
+#projects {
+  #projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: $projectsSpacing * 2;
+    column-gap: $projectsSpacing * 4;
+
+    @include desktopLarge {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $projectsSpacing;
+    overflow: hidden;
+
+    // Media query to avoid super wide videos
+    @include desktopMedium {
+      grid-template-columns: 1fr 1.4fr;
+    }
+
+    iframe {
+      width: 100%;
+      height: 20rem;
+      border-radius: 1rem;
+    }
+
+    .project-content {
+      max-height: 20rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto;
+
+      & > * {
+        margin-bottom: $projectsSpacing / 2;
+      }
+    }
+
+    h3 {
+      font-size: $projectsHeaderFontSize;
+      font-weight: bold;
+    }
+
+    .project-techs {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      & > * {
+        font-weight: bold;
+        font-size: $projectsTagsFontSize;
+        padding: $projectsTagsSpacing;
+        margin-right: $projectsTagsSpacing;
+        background-color: $baseBackgroundColourLighter;
+        border-radius: $projectsTagsSpacing;
+      }
+    }
+
+    .project-summary {
+      font-size: $projectsFontSize;
+    }
+
+    .project-links {
+      margin-top: $projectsSpacing;
+
+      a {
+        display: inline-block;
+        border-radius: 0.5rem;
+        background-color: $projectsLinksBackground;
+        margin: $projectsLinksPadding 0;
+        padding: $projectsLinksPadding $projectsLinksPadding * 2;
+        font-weight: bold;
+        font-size: $projectsFontSize;
+        transition-property: background-color, transform;
+        transition-duration: 200ms;
+        transition-timing-function: ease-in;
+
+        &:hover {
+          background-color: $projectsLinksBackgroundHover;
+        }
+
+        &:active,
+        &:focus {
+          transform: translateY(5%);
+          background-color: darken($projectsLinksBackground, 5%);
+        }
+      }
+    }
+  }
+}
