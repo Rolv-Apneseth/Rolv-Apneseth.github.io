@@ -28,3 +28,15 @@ $widthDesktopLarge: 1950px;
     @content;
   }
 }
+
+@mixin smallScreens {
+  @media (min-width: #{$widthTablet}) and (max-width: #{$widthDesktopMedium - 1px}) {
+    @content;
+  }
+}
+
+@mixin bigScreens {
+  @media (min-width: #{$widthDesktopMedium}) {
+    @content;
+  }
+}
