@@ -1,13 +1,28 @@
 @use "../variables" as *;
+@use "../mediaQueries" as *;
 
 #skills {
   #skills-container {
     display: grid;
+    grid-gap: $skillsSpacing;
     grid-template-columns: repeat(
       auto-fill,
-      minmax($skillsColumnMinWidth, 1fr)
+      minmax($skillsColumnMinWidthSmall, 1fr)
     );
-    grid-gap: $skillsSpacing;
+
+    // Media queries to adjust minimum column widths
+    @include smallScreens {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax($skillsColumnMinWidthMedium, 1fr)
+      );
+    }
+    @include bigScreens {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax($skillsColumnMinWidthLarge, 1fr)
+      );
+    }
 
     .skill {
       position: relative;
@@ -16,10 +31,9 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: $skillsColumnMinWidth + $skillsSpacing;
 
       img {
-        width: $skillsImageWidth;
+        width: 100%;
         margin-bottom: $skillsImageMargin;
         transition: transform $skillsTransitionDuration;
       }

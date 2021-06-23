@@ -363,8 +363,18 @@ section:nth-of-type(odd) {
 
 #skills #skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
-  grid-gap: 2.5rem;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  #skills #skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  }
+}
+@media (min-width: 1200px) {
+  #skills #skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  }
 }
 #skills #skills-container .skill {
   position: relative;
@@ -373,10 +383,9 @@ section:nth-of-type(odd) {
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 10rem;
 }
 #skills #skills-container .skill img {
-  width: 7rem;
+  width: 100%;
   margin-bottom: 0.5rem;
   transition: transform 400ms;
 }
