@@ -373,7 +373,7 @@ section:nth-of-type(odd) {
 }
 @media (min-width: 1200px) {
   #skills #skills-container {
-    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   }
 }
 #skills #skills-container .skill {
@@ -385,6 +385,7 @@ section:nth-of-type(odd) {
   text-align: center;
 }
 #skills #skills-container .skill img {
+  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
   width: 100%;
   margin-bottom: 0.5rem;
   transition: transform 400ms;

@@ -18,8 +18,9 @@
       );
     }
     @include bigScreens {
+      // Changed to auto-fit so only required columns are created
       grid-template-columns: repeat(
-        auto-fill,
+        auto-fit,
         minmax($skillsColumnMinWidthLarge, 1fr)
       );
     }
@@ -33,6 +34,7 @@
       text-align: center;
 
       img {
+        filter: $skillsFilter;
         width: 100%;
         margin-bottom: $skillsImageMargin;
         transition: transform $skillsTransitionDuration;

@@ -3,6 +3,9 @@ $white: hsl(0, 0%, 90%);
 $baseBackgroundColour: hsl(210, 7%, 10%);
 $baseBackgroundColourLighter: hsl(210, 7%, 19%);
 $highlightColour: hsl(41, 78%, 60%);
+// Hex to filter here: https://codepen.io/sosuke/pen/Pjoqqp
+$skillsFilter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg)
+  brightness(104%) contrast(103%) opacity(80%);
 
 // Measurements
 $introBarThickness: 0.1rem;
