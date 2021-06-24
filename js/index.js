@@ -1,23 +1,27 @@
-function lazyLoadIframes() {
-  const iframes = document.querySelectorAll("iframe");
-
+function lazyLoad() {
   const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const iframe = entry.target;
-        iframe.setAttribute("src", iframe.getAttribute("src-lazy"));
+        const element = entry.target;
+        element.setAttribute("src", element.getAttribute("src-lazy"));
 
-        observer.unobserve(iframe);
+        observer.unobserve(element);
       }
     });
   });
 
-  iframes.forEach((iframe) => {
-    lazyLoadObserver.observe(iframe);
+  // Elements to lazy load
+  const elements = [
+    ...document.querySelectorAll("iframe[src-lazy]"),
+    ...document.querySelectorAll("img[src-lazy]"),
+  ];
+
+  elements.forEach((element) => {
+    lazyLoadObserver.observe(element);
   });
 }
 
 // ON DOM LOADED
 window.addEventListener("DOMContentLoaded", function () {
-  lazyLoadIframes();
+  lazyLoad();
 });
