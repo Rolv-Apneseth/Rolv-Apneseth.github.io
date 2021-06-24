@@ -24,12 +24,13 @@
       &:after {
         content: "";
         height: $introBarThickness;
-        border-bottom: $introBarThickness solid $white;
+        background-color: $white;
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         animation: introductionBar $introBarDuration $introBarTiming;
+        animation-delay: $introBarDelay;
       }
     }
 
@@ -46,7 +47,8 @@
       letter-spacing: -0.2rem;
       font-size: 4.4rem;
       transform: translateY(120%);
-      animation: spawnUp $spawnDuration $spawnTiming $introBarDuration/3;
+      animation: spawnUp $spawnDuration $spawnTiming;
+      animation-delay: $spawnDelay;
       animation-fill-mode: forwards;
     }
 
@@ -56,7 +58,8 @@
       font-size: 1.5rem;
       text-transform: uppercase;
       transform: translateY(-200%);
-      animation: spawnDown $spawnDuration $spawnTiming $introBarDuration/3;
+      animation: spawnDown $spawnDuration $spawnTiming;
+      animation-delay: $spawnDelay;
       animation-fill-mode: forwards;
     }
   }
@@ -72,13 +75,13 @@
       letter-spacing: 0.02rem;
       font-weight: bold;
       font-size: 0.85rem;
-      animation: bounceDown $bounceUpDuration $bounceUpTiming $introBarDuration *
-        1.5;
+      animation: bounceDown $bounceUpDuration $bounceUpTiming;
+      animation-delay: $bounceUpDelay;
 
       img {
         height: 2.5rem;
-        animation: bounceDown $bounceUpDuration $bounceUpTiming
-          $introBarDuration * 1.5;
+        animation: bounceDown $bounceUpDuration $bounceUpTiming;
+        animation-delay: $bounceUpDelay;
         animation-iteration-count: 2;
       }
     }

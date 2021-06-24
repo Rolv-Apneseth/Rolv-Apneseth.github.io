@@ -233,13 +233,15 @@ section:nth-of-type(odd) {
 #opening #opening-content #opening-header:after {
   content: "";
   height: 0.1rem;
-  border-bottom: 0.1rem solid #e6e6e6;
+  background-color: #e6e6e6;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   -webkit-animation: introductionBar 1000ms ease-in-out;
           animation: introductionBar 1000ms ease-in-out;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
 }
 #opening #opening-content .wrapper {
   position: relative;
@@ -253,8 +255,10 @@ section:nth-of-type(odd) {
   letter-spacing: -0.2rem;
   font-size: 4.4rem;
   transform: translateY(120%);
-  -webkit-animation: spawnUp 300ms ease-out 333.3333333333ms;
-          animation: spawnUp 300ms ease-out 333.3333333333ms;
+  -webkit-animation: spawnUp 300ms ease-out;
+          animation: spawnUp 300ms ease-out;
+  -webkit-animation-delay: 833.3333333333ms;
+          animation-delay: 833.3333333333ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -264,8 +268,10 @@ section:nth-of-type(odd) {
   font-size: 1.5rem;
   text-transform: uppercase;
   transform: translateY(-200%);
-  -webkit-animation: spawnDown 300ms ease-out 333.3333333333ms;
-          animation: spawnDown 300ms ease-out 333.3333333333ms;
+  -webkit-animation: spawnDown 300ms ease-out;
+          animation: spawnDown 300ms ease-out;
+  -webkit-animation-delay: 833.3333333333ms;
+          animation-delay: 833.3333333333ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -280,13 +286,17 @@ section:nth-of-type(odd) {
   letter-spacing: 0.02rem;
   font-weight: bold;
   font-size: 0.85rem;
-  -webkit-animation: bounceDown 500ms ease-out 1500ms;
-          animation: bounceDown 500ms ease-out 1500ms;
+  -webkit-animation: bounceDown 500ms ease-out;
+          animation: bounceDown 500ms ease-out;
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
 }
 #opening #opening-scroll span img {
   height: 2.5rem;
-  -webkit-animation: bounceDown 500ms ease-out 1500ms;
-          animation: bounceDown 500ms ease-out 1500ms;
+  -webkit-animation: bounceDown 500ms ease-out;
+          animation: bounceDown 500ms ease-out;
+  -webkit-animation-delay: 2500ms;
+          animation-delay: 2500ms;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
 }
