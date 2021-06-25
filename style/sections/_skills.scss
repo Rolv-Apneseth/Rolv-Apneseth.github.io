@@ -19,6 +19,7 @@
     }
     @include bigScreens {
       // Changed to auto-fit so only required columns are created
+      gap: $skillsSpacing * 2;
       grid-template-columns: repeat(
         auto-fit,
         minmax($skillsColumnMinWidthLarge, 1fr)
