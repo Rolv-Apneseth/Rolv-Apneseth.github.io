@@ -2,7 +2,9 @@
 $white: hsl(0, 0%, 90%);
 $baseBackgroundColour: hsl(210, 7%, 10%);
 $baseBackgroundColourLighter: hsl(210, 7%, 19%);
-$highlightColour: hsl(41, 78%, 60%);
+$highlightColour: hsl(208, 98, 45);
+$highlightColourLighter: lighten($highlightColour, 10%);
+$highlightColourDarker: darken($highlightColour, 10%);
 // Hex to filter here: https://codepen.io/sosuke/pen/Pjoqqp
 $skillsFilter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg)
   brightness(104%) contrast(103%) opacity(80%);
@@ -29,9 +31,7 @@ $projectsSpacing: 0.9rem;
 $projectsFontSize: $baseFontSize * 1.1;
 $projectsTagsFontSize: $baseFontSize * 0.7;
 $projectsTagsSpacing: 0.4rem;
-$projectsLinksBackground: hsl(208, 98, 43);
-$projectsLinksBackgroundHover: hsl(208, 98, 50);
-$projectsLinksPadding: 0.4rem;
+$projectsLinksPadding: 0.6rem;
 
 // Animations
 $spawnDuration: 300ms;
@@ -44,3 +44,4 @@ $bounceUpDuration: 500ms;
 $bounceUpTiming: ease-out;
 $bounceUpDelay: $introBarDuration * 2 + $introBarDelay;
 $skillsTransitionDuration: 400ms;
+$buttonHoverDuration: 150ms;

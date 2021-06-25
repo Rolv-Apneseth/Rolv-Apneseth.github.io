@@ -81,7 +81,7 @@ html a {
   display: inline-block;
   width: 8rem;
   height: 0.06rem;
-  background-color: #e9b649;
+  background-color: #027ae3;
 }
 
 section:not(#opening) {
@@ -481,21 +481,21 @@ section:nth-of-type(odd) {
   margin-top: 0.9rem;
 }
 #projects .project .project-links a {
+  color: #1c94fd;
   display: inline-block;
   border-radius: 0.5rem;
-  background-color: #0275d9;
-  margin: 0.4rem 0;
-  padding: 0.4rem 0.8rem;
+  border: 0.15rem solid #027ae3;
+  margin: 0.6rem 0;
+  padding: 0.6rem 1.2rem;
   font-weight: bold;
   font-size: 1.155rem;
-  transition-property: background-color, transform;
-  transition-duration: 200ms;
+  transition-property: background-color, color, transform;
+  transition-duration: 150ms;
   transition-timing-function: ease-in;
 }
-#projects .project .project-links a:hover {
-  background-color: #0388fc;
-}
-#projects .project .project-links a:active, #projects .project .project-links a:focus {
-  transform: translateY(5%);
-  background-color: #0267c0;
+#projects .project .project-links a:hover, #projects .project .project-links a:active, #projects .project .project-links a:focus {
+  color: #e6e6e6;
+  background-color: #027ae3;
+  border-color: #1c94fd;
+  transform: translateY(-2%);
 }/*# sourceMappingURL=style.css.map */
