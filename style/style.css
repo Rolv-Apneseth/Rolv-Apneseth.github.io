@@ -117,6 +117,50 @@ section:nth-of-type(odd) {
   background-color: #2d3034;
 }
 
+.link-section {
+  position: relative;
+  height: 5rem;
+  width: 100%;
+}
+.link-section a {
+  background-color: #027ae3;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms ease-in;
+}
+.link-section a p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  text-align: center;
+  transition: transform 150ms ease-out;
+}
+.link-section a img {
+  visibility: hidden;
+  height: 3.2rem;
+  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+  transition: transform 150ms ease-in;
+  transform: translateY(-60%) scale(0.1);
+}
+.link-section a:hover, .link-section a:active, .link-section a:focus {
+  background-color: #1c94fd;
+}
+.link-section a:hover p, .link-section a:active p, .link-section a:focus p {
+  visibility: hidden;
+  transform: translateY(10%) scale(0.1);
+}
+.link-section a:hover img, .link-section a:active img, .link-section a:focus img {
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
 @-webkit-keyframes spawnUp {
   0% {
     transform: translateY(120%);
