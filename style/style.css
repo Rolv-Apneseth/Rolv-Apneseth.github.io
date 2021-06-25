@@ -77,7 +77,8 @@ html a {
   font-size: 3.3rem;
 }
 .section-header span {
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 2.25rem;
   display: inline-block;
   width: 8rem;
   height: 0.06rem;
@@ -350,6 +351,9 @@ section:nth-of-type(odd) {
   font-size: 1.254rem;
   margin-top: 1.5rem;
 }
+#about #about-header span {
+  margin-bottom: 1.5rem;
+}
 #about .wrapper {
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -467,39 +471,28 @@ section:nth-of-type(odd) {
 #projects #projects-container {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 1.8rem;
-  -moz-column-gap: 3.6rem;
-       column-gap: 3.6rem;
+  gap: 1.9rem;
 }
-@media (min-width: 1950px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
   #projects #projects-container {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  #projects #projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   }
 }
 #projects .project {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
   gap: 0.9rem;
-  overflow: hidden;
-}
-@media (min-width: 1200px) and (max-width: 1949px) {
-  #projects .project {
-    grid-template-columns: 1fr 1.4fr;
-  }
 }
 #projects .project iframe {
   width: 100%;
-  height: 21rem;
+  min-height: 15rem;
   border-radius: 1rem;
-}
-#projects .project .project-content {
-  max-height: 21rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr auto;
-}
-#projects .project .project-content > * {
-  margin-bottom: 0.45rem;
 }
 #projects .project h3 {
   font-size: 2.2rem;
@@ -507,11 +500,10 @@ section:nth-of-type(odd) {
 }
 #projects .project .project-techs {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   flex-wrap: wrap;
 }
 #projects .project .project-techs > * {
+  margin-top: 0.3rem;
   font-weight: bold;
   font-size: 0.735rem;
   padding: 0.4rem;
@@ -522,15 +514,12 @@ section:nth-of-type(odd) {
 #projects .project .project-summary {
   font-size: 1.155rem;
 }
-#projects .project .project-links {
-  margin-top: 0.9rem;
-}
 #projects .project .project-links a {
   color: #1c94fd;
   display: inline-block;
   border-radius: 0.5rem;
   border: 0.15rem solid #027ae3;
-  margin: 0.6rem 0;
+  margin-right: 0.3rem;
   padding: 0.6rem 1.2rem;
   font-weight: bold;
   font-size: 1.155rem;

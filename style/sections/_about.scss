@@ -8,6 +8,10 @@
       font-size: $sectionHeaderFontSize * 0.38;
       margin-top: $sectionHeaderSpacing;
     }
+
+    span {
+      margin-bottom: $sectionHeaderSpacing;
+    }
   }
 
   .wrapper {

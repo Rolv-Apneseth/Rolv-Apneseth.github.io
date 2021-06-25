@@ -5,40 +5,27 @@
   #projects-container {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: $projectsSpacing * 2;
-    column-gap: $projectsSpacing * 4;
+    gap: $projectsGap;
 
-    @include desktopLarge {
+    @include desktopSmall {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @include bigScreens {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
   }
 
   .project {
     display: grid;
     grid-template-columns: 1fr;
-    gap: $projectsSpacing;
-    overflow: hidden;
-
-    // Media query to avoid super wide videos
-    @include desktopMedium {
-      grid-template-columns: 1fr 1.4fr;
-    }
+    grid-template-rows: auto auto 1fr auto;
+    gap: $projectsContentGap;
 
     iframe {
       width: 100%;
-      height: 21rem;
+      min-height: $projectsVideoMinSize;
       border-radius: 1rem;
-    }
-
-    .project-content {
-      max-height: 21rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr auto;
-
-      & > * {
-        margin-bottom: $projectsSpacing / 2;
-      }
     }
 
     h3 {
@@ -48,11 +35,10 @@
 
     .project-techs {
       display: flex;
-      align-items: center;
-      justify-content: flex-start;
       flex-wrap: wrap;
 
       & > * {
+        margin-top: $projectsSpacingSmall;
         font-weight: bold;
         font-size: $projectsTagsFontSize;
         padding: $projectsTagsSpacing;
@@ -67,14 +53,12 @@
     }
 
     .project-links {
-      margin-top: $projectsSpacing;
-
       a {
         color: $highlightColourLighter;
         display: inline-block;
         border-radius: 0.5rem;
         border: 0.15rem solid $highlightColour;
-        margin: $projectsLinksPadding 0;
+        margin-right: $projectsSpacingSmall;
         padding: $projectsLinksPadding $projectsLinksPadding * 2;
         font-weight: bold;
         font-size: $projectsFontSize;
