@@ -420,24 +420,26 @@ section:nth-of-type(odd) {
 
 #skills #skills-container {
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(3.5rem, 1fr));
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   #skills #skills-container {
-    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
   }
 }
 @media (min-width: 1200px) and (max-width: 1949px) {
   #skills #skills-container {
-    gap: 2.6rem;
-    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    -moz-column-gap: 2.6rem;
+         column-gap: 2.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   }
 }
 @media (min-width: 1950px) {
   #skills #skills-container {
-    gap: 4rem;
-    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
   }
 }
 #skills #skills-container .skill {

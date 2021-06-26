@@ -3,7 +3,7 @@
 #skills {
   #skills-container {
     display: grid;
-    grid-gap: $skillsSpacing;
+    gap: $skillsSpacing;
     grid-template-columns: repeat(
       auto-fill,
       minmax($skillsColumnMinWidthSmallest, 1fr)
@@ -19,7 +19,7 @@
 
     @include desktopMedium {
       // Changed to auto-fit so only required columns are created
-      gap: $skillsSpacing * 1.3;
+      column-gap: $skillsSpacing * 1.3;
       grid-template-columns: repeat(
         auto-fit,
         minmax($skillsColumnMinWidthMedium, 1fr)
@@ -27,7 +27,7 @@
     }
 
     @include desktopLarge {
-      gap: $skillsSpacing * 2;
+      column-gap: $skillsSpacing * 1.5;
       grid-template-columns: repeat(
         auto-fit,
         minmax($skillsColumnMinWidthLarge, 1fr)
