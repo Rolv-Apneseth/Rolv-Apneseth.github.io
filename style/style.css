@@ -426,10 +426,16 @@ section:nth-of-type(odd) {
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   #skills #skills-container {
-    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1949px) {
+  #skills #skills-container {
+    gap: 2.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  }
+}
+@media (min-width: 1950px) {
   #skills #skills-container {
     gap: 4rem;
     grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));

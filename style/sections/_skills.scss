@@ -7,18 +7,27 @@
     grid-gap: $skillsSpacing;
     grid-template-columns: repeat(
       auto-fill,
-      minmax($skillsColumnMinWidthSmall, 1fr)
+      minmax($skillsColumnMinWidthSmallest, 1fr)
     );
 
     // Media queries to adjust minimum column widths
     @include smallScreens {
       grid-template-columns: repeat(
         auto-fill,
+        minmax($skillsColumnMinWidthSmall, 1fr)
+      );
+    }
+
+    @include desktopMedium {
+      // Changed to auto-fit so only required columns are created
+      gap: $skillsSpacing * 1.3;
+      grid-template-columns: repeat(
+        auto-fit,
         minmax($skillsColumnMinWidthMedium, 1fr)
       );
     }
-    @include bigScreens {
-      // Changed to auto-fit so only required columns are created
+
+    @include desktopLarge {
       gap: $skillsSpacing * 2;
       grid-template-columns: repeat(
         auto-fit,
