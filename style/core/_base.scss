@@ -1,9 +1,7 @@
-@use "../variables" as *;
-@use "../mediaQueries" as *;
-@use "../typography";
+@use "../abstracts" as *;
 
 html {
-  font-family: "Hack", "Courier New", monospace;
+  font-family: "roboto", sans-serif;
   color: $white;
 
   p {
