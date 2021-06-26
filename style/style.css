@@ -36,6 +36,20 @@ img {
   height: auto;
 }
 
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  resize: none;
+  overflow: auto;
+  font-family: inherit;
+  font-size: inherit;
+}
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Regular-webfont.woff") format("woff");
@@ -522,6 +536,7 @@ section:nth-of-type(odd) {
   font-size: 1.155rem;
 }
 #projects .project .project-links a {
+  cursor: pointer;
   background-color: transparent;
   color: #1c94fd;
   display: inline-block;
@@ -557,8 +572,13 @@ section:nth-of-type(odd) {
 #contact form {
   display: flex;
   flex-direction: column;
+  min-width: 30rem;
+}
+#contact form > *:not(:nth-child(1)) {
+  margin-top: 0.7rem;
 }
 #contact form button {
+  cursor: pointer;
   background-color: transparent;
   color: #1c94fd;
   display: inline-block;
@@ -571,10 +591,48 @@ section:nth-of-type(odd) {
   transition-property: background-color, color, transform;
   transition-duration: 150ms;
   transition-timing-function: ease-in;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 #contact form button:hover, #contact form button:active, #contact form button:focus {
   color: #e6e6e6;
   background-color: #027ae3;
   border-color: #1c94fd;
   transform: translateY(-2%);
+}
+#contact form .form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+#contact form .form-group label {
+  font-weight: bold;
+}
+#contact form .form-group textarea,
+#contact form .form-group input {
+  color: #c9c9c9;
+}
+#contact form .form-group:before, #contact form .form-group::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.5px;
+}
+#contact form .form-group:before {
+  width: 100%;
+  background-color: #8c8c8c;
+  z-index: 1;
+}
+#contact form .form-group:after {
+  width: 0;
+  background-color: #1c94fd;
+  z-index: 2;
+  transition: width 400ms ease-in;
+}
+#contact form .form-group:focus-within:after {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -35,3 +35,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  resize: none;
+  overflow: auto;
+  font-family: inherit;
+  font-size: inherit;
+
+  &:focus {
+    outline: 0;
+  }
+}

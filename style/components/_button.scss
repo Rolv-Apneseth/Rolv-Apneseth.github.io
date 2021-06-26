@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 @mixin buttonStyling {
+  cursor: pointer;
   background-color: transparent;
   color: $highlightColourLighter;
   display: inline-block;
