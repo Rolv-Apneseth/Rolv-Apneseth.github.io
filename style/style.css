@@ -520,6 +520,7 @@ section:nth-of-type(odd) {
   font-size: 1.155rem;
 }
 #projects .project .project-links a {
+  background-color: transparent;
   color: #1c94fd;
   display: inline-block;
   border-radius: 0.5rem;
