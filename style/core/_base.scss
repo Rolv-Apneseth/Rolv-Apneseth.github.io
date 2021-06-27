@@ -14,22 +14,6 @@ html {
   }
 }
 
-.section-header {
-  h2 {
-    font-weight: bold;
-    font-size: $sectionHeaderFontSize;
-  }
-
-  span {
-    margin-top: $sectionHeaderSpacing;
-    margin-bottom: $sectionHeaderSpacing * 1.5;
-    display: inline-block;
-    width: $sectionHeaderUnderlineWidth;
-    height: $sectionHeaderUnderlineHeight;
-    background-color: $highlightColour;
-  }
-}
-
 section:not(#opening) {
   width: 100%;
   padding: $sectionYPadding $sectionXPadding;
@@ -57,57 +41,4 @@ section:nth-of-type(even) {
 }
 section:nth-of-type(odd) {
   background-color: $baseBackgroundColourLighter;
-}
-
-// Page-wide links (e.g. github link, CV link)
-.link-section {
-  position: relative;
-  height: 5rem;
-  width: 100%;
-
-  a {
-    background-color: $highlightColour;
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color $buttonHoverDuration ease-in;
-
-    p {
-      font-size: $linkSectionFontSize;
-      font-weight: bold;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      transform: translateY(-50%);
-      text-align: center;
-      transition: transform $buttonHoverDuration ease-out;
-    }
-
-    img {
-      visibility: hidden;
-      height: $linkSectionFontSize * 2;
-      filter: $skillsFilter;
-      transition: transform $buttonHoverDuration ease-in;
-      transform: translateY(-60%) scale(0.1);
-    }
-
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: $highlightColourLighter;
-
-      p {
-        visibility: hidden;
-        transform: translateY(10%) scale(0.1);
-      }
-
-      img {
-        visibility: visible;
-        transform: translateY(0) scale(1);
-      }
-    }
-  }
 }
