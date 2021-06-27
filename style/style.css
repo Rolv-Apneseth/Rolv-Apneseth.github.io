@@ -291,7 +291,7 @@ section:nth-of-type(odd) {
 #opening #opening-content #opening-header:after {
   content: "";
   height: 0.1rem;
-  background-color: #e6e6e6;
+  background-color: #027ae3;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -309,8 +309,6 @@ section:nth-of-type(odd) {
 }
 #opening #opening-content h1 {
   font-weight: bold;
-  word-spacing: -1.5rem;
-  letter-spacing: -0.2rem;
   font-size: 4.4rem;
   transform: translateY(120%);
   -webkit-animation: spawnUp 300ms ease-out;
@@ -322,7 +320,6 @@ section:nth-of-type(odd) {
 }
 #opening #opening-content p {
   font-weight: bold;
-  letter-spacing: 0.02rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   transform: translateY(-200%);
@@ -340,14 +337,13 @@ section:nth-of-type(odd) {
   display: flex;
   flex-direction: column;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.02rem;
   font-weight: bold;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   -webkit-animation: bounceDown 500ms ease-out;
           animation: bounceDown 500ms ease-out;
   -webkit-animation-delay: 2500ms;
           animation-delay: 2500ms;
+  transition: transform 150ms;
 }
 #opening #opening-scroll span img {
   height: 2.5rem;
@@ -357,6 +353,13 @@ section:nth-of-type(odd) {
           animation-delay: 2500ms;
   -webkit-animation-iteration-count: 2;
           animation-iteration-count: 2;
+  transition: transform 150ms;
+}
+#opening #opening-scroll span:hover {
+  transform: translateY(-3%);
+}
+#opening #opening-scroll span:hover img {
+  transform: translateY(6%);
 }
 
 #about #about-header h3 {

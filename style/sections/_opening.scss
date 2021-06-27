@@ -23,7 +23,7 @@
       &:after {
         content: "";
         height: $introBarThickness;
-        background-color: $white;
+        background-color: $highlightColour;
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -42,9 +42,7 @@
 
     h1 {
       font-weight: bold;
-      word-spacing: -1.5rem;
-      letter-spacing: -0.2rem;
-      font-size: 4.4rem;
+      font-size: $openingTitleFontSize;
       transform: translateY(120%);
       animation: spawnUp $spawnDuration $spawnTiming;
       animation-delay: $spawnDelay;
@@ -53,8 +51,7 @@
 
     p {
       font-weight: bold;
-      letter-spacing: 0.02rem;
-      font-size: 1.5rem;
+      font-size: $openingDescriptionFontSize;
       text-transform: uppercase;
       transform: translateY(-200%);
       animation: spawnDown $spawnDuration $spawnTiming;
@@ -70,18 +67,26 @@
       display: flex;
       flex-direction: column;
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.02rem;
       font-weight: bold;
-      font-size: 0.85rem;
+      font-size: $openingLearMoreFontSize;
       animation: bounceDown $bounceUpDuration $bounceUpTiming;
       animation-delay: $bounceUpDelay;
+      transition: transform $buttonHoverDuration;
 
       img {
-        height: 2.5rem;
+        height: $openingDownArrowHeight;
         animation: bounceDown $bounceUpDuration $bounceUpTiming;
         animation-delay: $bounceUpDelay;
         animation-iteration-count: 2;
+        transition: transform $buttonHoverDuration;
+      }
+
+      &:hover {
+        transform: translateY(-3%);
+
+        img {
+          transform: translateY(6%);
+        }
       }
     }
   }
