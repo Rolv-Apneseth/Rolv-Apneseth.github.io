@@ -39,6 +39,8 @@ $projectsTagsFontSize: $baseFontSize * 0.7;
 $projectsTagsSpacing: 0.4rem;
 $projectsLinksPadding: 0.6rem;
 $linkSectionFontSize: 1.6rem;
+$contactLabelFontSize: 1.15rem;
+$contactInputHeight: 2rem;
 
 // Animations
 $spawnDuration: 300ms;
@@ -52,3 +54,6 @@ $bounceUpTiming: ease-out;
 $bounceUpDelay: $introBarDuration * 2 + $introBarDelay;
 $skillsTransitionDuration: 400ms;
 $buttonHoverDuration: 150ms;
+$contactTransitionDuration: 500ms;
+$contactTransitionTiming: ease-in-out;
+$contactTransitionHeightDuration: 100ms;

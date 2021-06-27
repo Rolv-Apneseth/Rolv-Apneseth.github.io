@@ -575,7 +575,7 @@ section:nth-of-type(odd) {
   min-width: 30rem;
 }
 #contact form > *:not(:nth-child(1)) {
-  margin-top: 0.7rem;
+  margin-top: 1rem;
 }
 #contact form button {
   cursor: pointer;
@@ -610,28 +610,43 @@ section:nth-of-type(odd) {
 }
 #contact form .form-group label {
   font-weight: bold;
+  font-size: 1.15rem;
+  transition-property: font-size, transform, color;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
 }
 #contact form .form-group textarea,
 #contact form .form-group input {
   color: #c9c9c9;
+  height: 2rem;
+  transition: height 100ms ease-in-out;
 }
 #contact form .form-group:before, #contact form .form-group::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 1.5px;
+  height: 0.1rem;
 }
 #contact form .form-group:before {
   width: 100%;
   background-color: #8c8c8c;
-  z-index: 1;
+  z-index: 5;
 }
 #contact form .form-group:after {
   width: 0;
   background-color: #1c94fd;
-  z-index: 2;
-  transition: width 400ms ease-in;
+  z-index: 10;
+  transition: width 500ms ease-in-out;
+}
+#contact form .form-group:focus-within label {
+  transform: translateY(-50%);
+  font-size: 0.8625rem;
+  color: #1c94fd;
+}
+#contact form .form-group:focus-within textarea,
+#contact form .form-group:focus-within input {
+  height: 2.6rem;
 }
 #contact form .form-group:focus-within:after {
   width: 100%;
