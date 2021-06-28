@@ -620,9 +620,9 @@ section:nth-of-type(odd) {
 }
 #contact form .form-group textarea,
 #contact form .form-group input {
+  overflow: hidden;
   color: #c9c9c9;
   height: 2rem;
-  transition: height 100ms ease-in-out;
 }
 #contact form .form-group:before, #contact form .form-group::after {
   content: "";

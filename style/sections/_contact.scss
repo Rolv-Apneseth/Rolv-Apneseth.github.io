@@ -46,10 +46,9 @@
 
       textarea,
       input {
+        overflow: hidden;
         color: $lighterGrey;
         height: $contactInputHeight;
-        transition: height $contactTransitionHeightDuration
-          $contactTransitionTiming;
       }
 
       &:before,

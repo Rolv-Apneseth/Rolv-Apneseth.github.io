@@ -1,3 +1,11 @@
+// Auto expand text area
+const textarea = document.getElementById("message");
+
+textarea.addEventListener("input", () => {
+  textarea.style.height = textarea.scrollHeight + "px";
+});
+
+// Lazy load images and iframes
 function lazyLoad() {
   const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
