@@ -570,7 +570,7 @@ section:nth-of-type(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 #contact form {
   display: flex;
@@ -579,6 +579,11 @@ section:nth-of-type(odd) {
 }
 #contact form > *:not(:nth-child(1)) {
   margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  #contact form {
+    min-width: 90%;
+  }
 }
 #contact form button {
   cursor: pointer;

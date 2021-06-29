@@ -5,6 +5,12 @@ $widthDesktopMedium: 1200px;
 $widthDesktopLarge: 1950px;
 
 // Mixins
+@mixin phone-only {
+  @media (max-width: #{$widthTablet - 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (min-width: #{$widthTablet}) and (max-width: #{$widthDesktopSmall - 1px}) {
     @content;

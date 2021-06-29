@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
   }
 
   form {
@@ -22,6 +22,11 @@
     // margin-top on all but first element
     & > *:not(:nth-child(1)) {
       margin-top: 1rem;
+    }
+
+    // Change width of form element for phone screens only
+    @include phone-only {
+      min-width: 90%;
     }
 
     button {
