@@ -42,3 +42,13 @@ section:nth-of-type(even) {
 section:nth-of-type(odd) {
   background-color: $baseBackgroundColourLighter;
 }
+
+// Fullpage Animation Classes applied with JS (if possible)
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+
+  &.appear {
+    opacity: 1;
+  }
+}

@@ -213,6 +213,14 @@ section:nth-of-type(odd) {
   background-color: #2d3034;
 }
 
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+.fade-in.appear {
+  opacity: 1;
+}
+
 #opening {
   display: flex;
   flex-direction: column;
