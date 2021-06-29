@@ -213,14 +213,15 @@ section:nth-of-type(odd) {
   background-color: #2d3034;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 300ms ease-in;
+@media screen and (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+  }
+  .fade-in.appear {
+    opacity: 1;
+  }
 }
-.fade-in.appear {
-  opacity: 1;
-}
-
 #opening {
   display: flex;
   flex-direction: column;

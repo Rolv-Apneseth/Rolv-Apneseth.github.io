@@ -43,12 +43,14 @@ section:nth-of-type(odd) {
   background-color: $baseBackgroundColourLighter;
 }
 
-// Fullpage Animation Classes applied with JS (if possible)
-.fade-in {
-  opacity: 0;
-  transition: opacity 300ms ease-in;
+// Fullpage Animation Classes applied with JS (if possible) and if user has no preference for reduced motion
+@media screen and (prefers-reduced-motion: no-preference) {
+  .fade-in {
+    opacity: 0;
+    transition: opacity $fadeInDuration $fadeInTiming;
 
-  &.appear {
-    opacity: 1;
+    &.appear {
+      opacity: 1;
+    }
   }
 }
