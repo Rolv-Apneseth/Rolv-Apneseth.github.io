@@ -1,5 +1,16 @@
-// Apply fade-in fullpage animations
+// Returns false if user has the preference of reduce-motion set to reduce
+// Otherwise, retuns true (so animations can be enabled)
+function isAnimationOn() {
+  return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// Apply fullpage animations
 function fullpageAnimations() {
+  // If user has reduce-motion: reduce set, exit
+  if (!isAnimationOn()) {
+    return;
+  }
+
   // Intersection observer
   function getIntersectionObserver(options) {
     return new IntersectionObserver((entries, observer) => {

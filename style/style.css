@@ -216,27 +216,26 @@ section:nth-of-type(odd) {
   background-color: #2d3034;
 }
 
-@media screen and (prefers-reduced-motion: no-preference) {
-  .fade-in {
-    opacity: 0;
-    transition: opacity 300ms ease-in;
-  }
-  .fade-in.appear {
-    opacity: 1;
-  }
-
-  .slide-in {
-    opacity: 0;
-    transform: translateX(-50%);
-    transition-property: transform, opacity;
-    transition-duration: 500ms;
-    transition-timing-function: ease-in;
-  }
-  .slide-in.appear {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.fade-in {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
 }
+.fade-in.appear {
+  opacity: 1;
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition-property: transform, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in;
+}
+.slide-in.appear {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 #opening {
   display: flex;
   flex-direction: column;

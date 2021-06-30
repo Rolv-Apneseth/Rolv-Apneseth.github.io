@@ -47,27 +47,27 @@ section:nth-of-type(odd) {
   background-color: $baseBackgroundColourLighter;
 }
 
-// Fullpage Animation Classes applied with JS (if possible) and if user has no preference for reduced motion
-@media screen and (prefers-reduced-motion: no-preference) {
-  .fade-in {
-    opacity: 0;
-    transition: opacity $fadeInDuration $fadeInTiming;
+// Fullpage Animation
+// Classes only applied with JS (if possible)
+// Reduce-motion preference is respected in the JS
+.fade-in {
+  opacity: 0;
+  transition: opacity $fadeInDuration $fadeInTiming;
 
-    &.appear {
-      opacity: 1;
-    }
+  &.appear {
+    opacity: 1;
   }
+}
 
-  .slide-in {
-    opacity: 0;
-    transform: translateX(-50%);
-    transition-property: transform, opacity;
-    transition-duration: $fadeInDuration + 200ms;
-    transition-timing-function: $fadeInTiming;
+.slide-in {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition-property: transform, opacity;
+  transition-duration: $fadeInDuration + 200ms;
+  transition-timing-function: $fadeInTiming;
 
-    &.appear {
-      opacity: 1;
-      transform: translateX(0);
-    }
+  &.appear {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
