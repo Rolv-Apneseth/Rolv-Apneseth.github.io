@@ -1,31 +1,47 @@
-// Apply fullpage animations
+// Apply fade-in fullpage animations
 function fullpageAnimations() {
-  const elements = [
-    ...document.querySelectorAll(".section-header, .skill"),
-    ...document.querySelectorAll("p, form, img:not(#arrow-down)"),
-  ];
+  // Intersection observer
+  function getIntersectionObserver(options) {
+    return new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-  const appearOptions = {
+        entry.target.classList.add("appear");
+        observer.unobserve(entry.target);
+        console.log(entry.target);
+      });
+    }, options);
+  }
+
+  // FADERS
+  const faderObserver = getIntersectionObserver({
     threshold: 1,
     rootMargin: "0px 0px -30px 0px",
-  };
+  });
 
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+  const faders = document.querySelectorAll(
+    ".section-header, .skill, p, form, img:not(#arrow-down)"
+  );
 
-      entry.target.classList.add("appear");
-      appearOnScroll.unobserve(entry.target);
-      console.log(entry.target);
-    });
-  }, appearOptions);
+  faders.forEach((fader) => {
+    // class only added if javascript is available
+    fader.classList.add("fade-in");
+    faderObserver.observe(fader);
+  });
 
-  elements.forEach((element) => {
-    // fade-in class only added if javascript is available
-    element.classList.add("fade-in");
-    appearOnScroll.observe(element);
+  // SLIDERS
+  const sliderObserver = getIntersectionObserver({
+    threshold: 0.5,
+    rootMargin: "0px 0px 0px 400px",
+  });
+
+  const sliders = document.querySelectorAll(".project");
+
+  sliders.forEach((slider) => {
+    slider.classList.add("slide-in");
+    sliderObserver.observe(slider);
   });
 }
 

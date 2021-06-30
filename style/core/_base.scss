@@ -4,6 +4,10 @@ html {
   font-family: "roboto", sans-serif;
   color: $white;
 
+  body {
+    overflow-x: hidden;
+  }
+
   p {
     font-size: $baseFontSize;
   }
@@ -51,6 +55,19 @@ section:nth-of-type(odd) {
 
     &.appear {
       opacity: 1;
+    }
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition-property: transform, opacity;
+    transition-duration: $fadeInDuration + 200ms;
+    transition-timing-function: $fadeInTiming;
+
+    &.appear {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

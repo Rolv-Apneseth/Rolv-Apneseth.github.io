@@ -172,6 +172,9 @@ html {
   font-family: "roboto", sans-serif;
   color: #e6e6e6;
 }
+html body {
+  overflow-x: hidden;
+}
 html p {
   font-size: 1.05rem;
 }
@@ -220,6 +223,18 @@ section:nth-of-type(odd) {
   }
   .fade-in.appear {
     opacity: 1;
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition-property: transform, opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+  }
+  .slide-in.appear {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 #opening {
