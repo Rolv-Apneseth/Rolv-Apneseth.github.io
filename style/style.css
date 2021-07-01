@@ -681,4 +681,26 @@ section:nth-of-type(odd) {
 }
 #contact form .form-group:focus-within:after {
   width: 100%;
+}
+
+#footer {
+  background: linear-gradient(0deg, #025fb1 0, #1c94fd 100%);
+  padding: 2rem 0;
+}
+#footer ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8rem;
+}
+#footer img {
+  height: 100%;
+  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+}
+#footer li {
+  height: 100%;
+}
+#footer li + li {
+  margin-left: 1rem;
 }/*# sourceMappingURL=style.css.map */

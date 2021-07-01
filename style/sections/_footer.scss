@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+#footer {
+  background: linear-gradient(
+    0deg,
+    $highlightColourDarker 0,
+    $highlightColourLighter 100%
+  );
+  padding: 2rem 0;
+
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.8rem;
+  }
+
+  img {
+    height: 100%;
+    filter: $skillsFilter;
+  }
+
+  li {
+    height: 100%;
+  }
+
+  // Only li element with li element preceding it
+  li + li {
+    margin-left: 1rem;
+  }
+}
