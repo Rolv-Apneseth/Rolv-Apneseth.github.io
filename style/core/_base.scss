@@ -47,7 +47,7 @@ section:nth-of-type(odd) {
   background-color: $baseBackgroundColourLighter;
 }
 
-// Fullpage Animation
+// Fullpage Animations
 // Classes only applied with JS (if possible)
 // Reduce-motion preference is respected in the JS
 .fade-in {
@@ -61,7 +61,7 @@ section:nth-of-type(odd) {
 
 .slide-in {
   opacity: 0;
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   transition-property: transform, opacity;
   transition-duration: $fadeInDuration + 200ms;
   transition-timing-function: $fadeInTiming;
