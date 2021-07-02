@@ -209,11 +209,11 @@ section:not(#opening) {
 }
 
 section:nth-of-type(even) {
-  background-color: #181a1b;
+  background-color: #1c1f21;
 }
 
 section:nth-of-type(odd) {
-  background-color: #2d3034;
+  background-color: #26292c;
 }
 
 .fade-in {
@@ -555,7 +555,7 @@ section:nth-of-type(odd) {
   font-size: 0.735rem;
   padding: 0.4rem;
   margin-right: 0.4rem;
-  background-color: #2d3034;
+  background-color: #26292c;
   border-radius: 0.4rem;
 }
 #projects .project .project-summary {
@@ -600,7 +600,7 @@ section:nth-of-type(odd) {
   flex-direction: column;
   min-width: 30rem;
 }
-#contact form > *:not(:nth-child(1)) {
+#contact form > * + * {
   margin-top: 1rem;
 }
 @media (max-width: 767px) {
@@ -684,23 +684,33 @@ section:nth-of-type(odd) {
 }
 
 #footer {
-  background: linear-gradient(0deg, #025fb1 0, #1c94fd 100%);
-  padding: 2rem 0;
+  background-color: #1c1f21;
+  padding: 2.8rem 0;
+}
+#footer > * {
+  width: 100%;
 }
 #footer ul {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1.8rem;
+  height: 2.4rem;
 }
-#footer img {
+#footer ul li {
+  height: 100%;
+}
+#footer ul li + li {
+  margin-left: 1.4rem;
+}
+#footer ul li img {
   height: 100%;
   filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
 }
-#footer li {
-  height: 100%;
+#footer p {
+  font-weight: bold;
+  margin-top: 2.8rem;
+  text-align: center;
 }
-#footer li + li {
-  margin-left: 1rem;
+#footer p span {
+  color: #1c94fd;
 }/*# sourceMappingURL=style.css.map */

@@ -1,32 +1,41 @@
 @use "../abstracts" as *;
 
 #footer {
-  background: linear-gradient(
-    0deg,
-    $highlightColourDarker 0,
-    $highlightColourLighter 100%
-  );
-  padding: 2rem 0;
+  background-color: $baseBackgroundColour;
+  padding: $footerSpacing 0;
+
+  & > * {
+    width: 100%;
+  }
 
   ul {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 1.8rem;
+    height: $footerIconHeight;
+
+    li {
+      height: 100%;
+
+      // Only li element with li element preceding it
+      & + li {
+        margin-left: 1.4rem;
+      }
+
+      img {
+        height: 100%;
+        filter: $skillsFilter;
+      }
+    }
   }
 
-  img {
-    height: 100%;
-    filter: $skillsFilter;
-  }
+  p {
+    font-weight: bold;
+    margin-top: $footerSpacing;
+    text-align: center;
 
-  li {
-    height: 100%;
-  }
-
-  // Only li element with li element preceding it
-  li + li {
-    margin-left: 1rem;
+    span {
+      color: $highlightColourLighter;
+    }
   }
 }

@@ -2,8 +2,8 @@
 $lightGrey: hsl(0, 0%, 55%);
 $lighterGrey: hsl(0, 0%, 79%);
 $white: hsl(0, 0%, 90%);
-$baseBackgroundColour: hsl(210, 7%, 10%);
-$baseBackgroundColourLighter: hsl(210, 7%, 19%);
+$baseBackgroundColour: hsl(210, 7%, 12%);
+$baseBackgroundColourLighter: hsl(210, 7%, 16%);
 $highlightColour: hsl(208, 98, 45);
 $highlightColourLighter: lighten($highlightColour, 10%);
 $highlightColourDarker: darken($highlightColour, 10%);
@@ -45,6 +45,8 @@ $projectsLinksPadding: 0.6rem;
 $linkSectionFontSize: 1.6rem;
 $contactLabelFontSize: 1.15rem;
 $contactInputHeight: 2rem;
+$footerSpacing: 2.8rem;
+$footerIconHeight: 2.4rem;
 
 // Animations
 $fadeInDuration: 300ms;
