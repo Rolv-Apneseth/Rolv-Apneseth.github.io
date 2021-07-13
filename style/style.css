@@ -538,7 +538,7 @@ section:nth-of-type(odd) {
 }
 #projects .project iframe {
   width: 100%;
-  min-height: 15rem;
+  min-height: 20rem;
   border-radius: 1rem;
 }
 #projects .project h3 {
