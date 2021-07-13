@@ -25,6 +25,11 @@
       img {
         height: 100%;
         filter: $skillsFilter;
+        transition: transform $buttonHoverDuration;
+
+        &:hover {
+          transform: translateY(-15%) scale(1.07);
+        }
       }
     }
   }

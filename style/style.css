@@ -705,6 +705,10 @@ section:nth-of-type(odd) {
 #footer ul li img {
   height: 100%;
   filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+  transition: transform 150ms;
+}
+#footer ul li img:hover {
+  transform: translateY(-15%) scale(1.07);
 }
 #footer p {
   font-weight: bold;
