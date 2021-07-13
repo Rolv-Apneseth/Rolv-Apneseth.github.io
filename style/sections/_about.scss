@@ -1,0 +1,92 @@
+@use "../abstracts" as *;
+
+#about {
+  #about-header {
+    h3 {
+      font-weight: bold;
+      font-size: $sectionHeaderFontSize * 0.38;
+      margin-top: $sectionHeaderSpacing;
+    }
+
+    span {
+      margin-bottom: $sectionHeaderSpacing;
+    }
+  }
+
+  .wrapper {
+    height: min-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: $sectionHeaderSpacing;
+
+    img {
+      width: $profileSmallSize;
+      border-radius: 50%;
+      grid-row: 1;
+    }
+
+    #about-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      p {
+        margin-bottom: $paragraphSpacing;
+      }
+    }
+  }
+
+  // Media queries
+  @include desktopSmall {
+    .wrapper {
+      grid-template-columns: 70% 1fr;
+      grid-template-rows: 1fr;
+
+      img {
+        width: 100%;
+        grid-column: 2;
+      }
+    }
+  }
+
+  // For both desktopMedium and desktopLarge
+  @include bigScreens {
+    .wrapper {
+      grid-template-rows: 1fr;
+
+      img {
+        width: 100%;
+        grid-column: 2;
+        margin-left: $sectionXPadding;
+        margin-top: -$sectionYPadding * 1.5;
+      }
+    }
+  }
+
+  @include desktopMedium {
+    #about-header {
+      width: 70%;
+    }
+
+    .wrapper {
+      grid-template-columns: 70% 1fr;
+    }
+  }
+
+  @include desktopLarge {
+    #about-header {
+      width: 60%;
+    }
+
+    .wrapper {
+      grid-template-columns: 60% 1fr;
+      justify-items: right;
+
+      img {
+        width: $profileLargeSize;
+      }
+    }
+  }
+}

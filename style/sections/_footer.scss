@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+#footer {
+  background-color: $baseBackgroundColour;
+  padding: $footerSpacing 0;
+
+  & > * {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $footerIconHeight;
+
+    li {
+      height: 100%;
+
+      // Only li element with li element preceding it
+      & + li {
+        margin-left: 1.4rem;
+      }
+
+      img {
+        height: 100%;
+        filter: $skillsFilter;
+        transition: transform $buttonHoverDuration;
+
+        &:hover {
+          transform: translateY(-15%) scale(1.07);
+        }
+      }
+    }
+  }
+
+  p {
+    font-weight: bold;
+    margin-top: $footerSpacing;
+    text-align: center;
+
+    span {
+      color: $highlightColourLighter;
+    }
+  }
+}

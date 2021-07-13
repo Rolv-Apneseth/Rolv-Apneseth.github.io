@@ -1,0 +1,50 @@
+@keyframes spawnUp {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spawnDown {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes introductionBar {
+  0% {
+    width: 0;
+  }
+  35% {
+    width: 150%;
+  }
+  50% {
+    width: 150%;
+  }
+  65% {
+    width: 150%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  85% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

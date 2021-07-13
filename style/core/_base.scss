@@ -1,0 +1,73 @@
+@use "../abstracts" as *;
+
+html {
+  font-family: "roboto", sans-serif;
+  color: $white;
+
+  body {
+    overflow-x: hidden;
+  }
+
+  p {
+    font-size: $baseFontSize;
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+section:not(#opening) {
+  width: 100%;
+  padding: $sectionYPadding $sectionXPadding;
+
+  @include tablet {
+    padding: $sectionYPadding $sectionXPadding * 2;
+  }
+
+  @include desktopSmall {
+    padding: $sectionYPadding $sectionXPadding * 3;
+  }
+
+  @include desktopMedium {
+    padding: $sectionYPadding $sectionXPadding * 4;
+  }
+
+  @include desktopLarge {
+    padding: $sectionYPadding $sectionXPadding * 12;
+  }
+}
+
+// Alternating background colours
+section:nth-of-type(even) {
+  background-color: $baseBackgroundColour;
+}
+section:nth-of-type(odd) {
+  background-color: $baseBackgroundColourLighter;
+}
+
+// Fullpage Animations
+// Classes only applied with JS (if possible)
+// Reduce-motion preference is respected in the JS
+.fade-in {
+  opacity: 0;
+  transition: opacity $fadeInDuration $fadeInTiming;
+
+  &.appear {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(-20%);
+  transition-property: transform, opacity;
+  transition-duration: $fadeInDuration + 200ms;
+  transition-timing-function: $fadeInTiming;
+
+  &.appear {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

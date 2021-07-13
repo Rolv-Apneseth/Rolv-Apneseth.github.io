@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+
+#skills {
+  #skills-container {
+    display: grid;
+    gap: $skillsSpacing;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax($skillsColumnMinWidthSmallest, 1fr)
+    );
+
+    // Media queries to adjust minimum column widths
+    @include smallScreens {
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax($skillsColumnMinWidthSmall, 1fr)
+      );
+    }
+
+    @include desktopMedium {
+      // Changed to auto-fit so only required columns are created
+      column-gap: $skillsSpacing * 1.3;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax($skillsColumnMinWidthMedium, 1fr)
+      );
+    }
+
+    @include desktopLarge {
+      column-gap: $skillsSpacing * 1.5;
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax($skillsColumnMinWidthLarge, 1fr)
+      );
+    }
+
+    .skill {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      img {
+        filter: $skillsFilter;
+        width: 100%;
+        margin-bottom: $skillsImageMargin;
+        transition: transform $skillsTransitionDuration;
+      }
+
+      p {
+        font-size: $baseFontSize * 0.95;
+        font-weight: bold;
+      }
+
+      // If device supports hover, apply some simple animations
+      @media (hover) {
+        p {
+          opacity: 0;
+          transform: translateY(100%);
+          transition: transform $skillsTransitionDuration,
+            opacity $skillsTransitionDuration linear;
+        }
+
+        &:hover {
+          p {
+            transform: translateY(-$skillsImageMargin);
+            opacity: 1;
+          }
+
+          img {
+            transform: translateY(-$skillsImageMargin);
+          }
+        }
+      }
+    }
+  }
+}

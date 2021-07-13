@@ -1,0 +1,61 @@
+@use "../abstracts" as *;
+@use "../components" as *;
+
+#projects {
+  #projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $projectsGap;
+
+    @include desktopSmall {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include bigScreens {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: $projectsContentGap;
+
+    iframe {
+      width: 100%;
+      min-height: $projectsVideoMinSize;
+      border-radius: 1rem;
+    }
+
+    h3 {
+      font-size: $projectsHeaderFontSize;
+      font-weight: bold;
+    }
+
+    .project-techs {
+      display: flex;
+      flex-wrap: wrap;
+
+      & > * {
+        margin-top: $projectsSpacingSmall;
+        font-weight: bold;
+        font-size: $projectsTagsFontSize;
+        padding: $projectsTagsSpacing;
+        margin-right: $projectsTagsSpacing;
+        background-color: $baseBackgroundColourLighter;
+        border-radius: $projectsTagsSpacing;
+      }
+    }
+
+    .project-summary {
+      font-size: $projectsFontSize;
+    }
+
+    .project-links {
+      a {
+        @include buttonStyling;
+      }
+    }
+  }
+}

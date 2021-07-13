@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+.section-header {
+  h2 {
+    font-weight: bold;
+    font-size: $sectionHeaderFontSize;
+  }
+
+  span {
+    margin-top: $sectionHeaderSpacing;
+    margin-bottom: $sectionHeaderSpacing * 1.5;
+    display: inline-block;
+    width: $sectionHeaderUnderlineWidth;
+    height: $sectionHeaderUnderlineHeight;
+    background-color: $highlightColour;
+  }
+}

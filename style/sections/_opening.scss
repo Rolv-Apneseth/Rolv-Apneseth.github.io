@@ -1,0 +1,93 @@
+@use "../abstracts" as *;
+
+#opening {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/images/background.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+
+  #opening-content {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    #opening-header {
+      &:after {
+        content: "";
+        height: $introBarThickness;
+        background-color: $highlightColour;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: introductionBar $introBarDuration $introBarTiming;
+        animation-delay: $introBarDelay;
+      }
+    }
+
+    .wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem 0;
+      width: 100%;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: $openingTitleFontSize;
+      transform: translateY(120%);
+      animation: spawnUp $spawnDuration $spawnTiming;
+      animation-delay: $spawnDelay;
+      animation-fill-mode: forwards;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: $openingDescriptionFontSize;
+      text-transform: uppercase;
+      transform: translateY(-200%);
+      animation: spawnDown $spawnDuration $spawnTiming;
+      animation-delay: $spawnDelay;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  #opening-scroll {
+    margin-bottom: 1rem;
+
+    span {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      font-weight: bold;
+      font-size: $openingLearMoreFontSize;
+      animation: bounceDown $bounceUpDuration $bounceUpTiming;
+      animation-delay: $bounceUpDelay;
+      transition: transform $buttonHoverDuration;
+
+      img {
+        height: $openingDownArrowHeight;
+        animation: bounceDown $bounceUpDuration $bounceUpTiming;
+        animation-delay: $bounceUpDelay;
+        animation-iteration-count: 2;
+        transition: transform $buttonHoverDuration;
+      }
+
+      &:hover {
+        transform: translateY(-3%);
+
+        img {
+          transform: translateY(6%);
+        }
+      }
+    }
+  }
+}

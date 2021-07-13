@@ -1,0 +1,66 @@
+// Colours
+$lightGrey: hsl(0, 0%, 55%);
+$lighterGrey: hsl(0, 0%, 79%);
+$white: hsl(0, 0%, 90%);
+$baseBackgroundColour: hsl(210, 7%, 12%);
+$baseBackgroundColourLighter: hsl(210, 7%, 16%);
+$highlightColour: hsl(208, 98, 45);
+$highlightColourLighter: lighten($highlightColour, 10%);
+$highlightColourDarker: darken($highlightColour, 10%);
+// Hex to filter here: https://codepen.io/sosuke/pen/Pjoqqp
+$skillsFilter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg)
+  brightness(104%) contrast(103%) opacity(80%);
+
+// Measurements
+$baseFontSize: 1.05rem;
+$introBarThickness: 0.1rem;
+$openingTitleFontSize: 4.4rem;
+$openingDescriptionFontSize: 1.5rem;
+$openingLearMoreFontSize: 0.9rem;
+$openingDownArrowHeight: 2.5rem;
+$sectionHeaderFontSize: 3.3rem;
+$sectionHeaderSpacing: 1.5rem;
+$sectionHeaderUnderlineWidth: 8rem;
+$sectionHeaderUnderlineHeight: 0.06rem;
+$sectionYPadding: 6rem;
+$sectionXPadding: 1.5rem;
+$profileSmallSize: 20rem;
+$profileLargeSize: 30rem;
+$paragraphSpacing: 1rem;
+$skillsSpacing: 2rem;
+$skillsImageMargin: 0.5rem;
+$skillsColumnMinWidthSmallest: 3.5rem;
+$skillsColumnMinWidthSmall: 4rem;
+$skillsColumnMinWidthMedium: 5rem;
+$skillsColumnMinWidthLarge: 6rem;
+$projectsHeaderFontSize: 2.2rem;
+$projectsGap: 1.9rem;
+$projectsContentGap: 0.9rem;
+$projectsSpacingSmall: 0.3rem;
+$projectsVideoMinSize: 20rem;
+$projectsFontSize: $baseFontSize * 1.1;
+$projectsTagsFontSize: $baseFontSize * 0.7;
+$projectsTagsSpacing: 0.4rem;
+$projectsLinksPadding: 0.6rem;
+$linkSectionFontSize: 1.6rem;
+$contactLabelFontSize: 1.15rem;
+$contactInputHeight: 2rem;
+$footerSpacing: 2.8rem;
+$footerIconHeight: 2.4rem;
+
+// Animations
+$fadeInDuration: 300ms;
+$fadeInTiming: ease-in;
+$spawnDuration: 300ms;
+$spawnTiming: ease-out;
+$introBarDuration: 1000ms;
+$introBarTiming: ease-in-out;
+$introBarDelay: 500ms;
+$spawnDelay: $introBarDuration/3 + $introBarDelay;
+$bounceUpDuration: 500ms;
+$bounceUpTiming: ease-out;
+$bounceUpDelay: $introBarDuration * 2 + $introBarDelay;
+$skillsTransitionDuration: 400ms;
+$buttonHoverDuration: 150ms;
+$contactTransitionDuration: 500ms;
+$contactTransitionTiming: ease-in-out;

@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+@mixin buttonStyling {
+  cursor: pointer;
+  background-color: transparent;
+  color: $highlightColourLighter;
+  display: inline-block;
+  border-radius: 0.5rem;
+  border: 0.15rem solid $highlightColour;
+  margin-right: $projectsSpacingSmall;
+  padding: $projectsLinksPadding $projectsLinksPadding * 2;
+  font-weight: bold;
+  font-size: $projectsFontSize;
+  transition-property: background-color, color, transform;
+  transition-duration: $buttonHoverDuration;
+  transition-timing-function: ease-in;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    background-color: $highlightColour;
+    border-color: $highlightColourLighter;
+    transform: translateY(-2%);
+  }
+}
