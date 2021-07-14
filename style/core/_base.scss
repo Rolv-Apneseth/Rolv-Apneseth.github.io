@@ -3,6 +3,7 @@
 html {
   font-family: "roboto", sans-serif;
   color: $white;
+  scroll-behavior: smooth;
 
   body {
     overflow-x: hidden;

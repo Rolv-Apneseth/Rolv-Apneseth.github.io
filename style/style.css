@@ -171,6 +171,7 @@ textarea:focus {
 html {
   font-family: "roboto", sans-serif;
   color: #e6e6e6;
+  scroll-behavior: smooth;
 }
 html body {
   overflow-x: hidden;
