@@ -1,3 +1,13 @@
+// Toggles the show-nav class on the navbar when the nav-toggle button is pressed
+function navBarToggling() {
+  const toggleButton = document.getElementById("nav-toggle");
+  const navBar = document.getElementById("nav");
+
+  toggleButton.addEventListener("click", () => {
+    navBar.classList.toggle("show-nav");
+  });
+}
+
 // Returns false if user has the preference of reduce-motion set to reduce
 // Otherwise, retuns true (so animations can be enabled)
 function isAnimationOn() {
@@ -94,4 +104,5 @@ window.addEventListener("DOMContentLoaded", function () {
   lazyLoad();
   autoExpand();
   fullpageAnimations();
+  navBarToggling();
 });
