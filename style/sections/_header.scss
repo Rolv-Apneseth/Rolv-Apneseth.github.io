@@ -46,9 +46,9 @@ header {
   span:before,
   span:after {
     width: 2rem;
-    height: $introBarThickness * 1.5;
+    height: 0.2rem;
     background-color: $white;
-    transition: transform 250ms ease-in-out;
+    transition: transform $navBarDuration $navBarTiming;
   }
 }
 
@@ -61,6 +61,7 @@ nav {
   height: 100%;
   min-width: 20rem;
   transform: translateX(100%);
+  transition: transform $navBarDuration $navBarTiming;
 
   ul {
     height: 100%;
@@ -91,5 +92,21 @@ nav {
 }
 
 .show-nav {
-  transform: translateX(0);
+  nav {
+    transform: translateX(0);
+  }
+
+  #nav-toggle {
+    span {
+      transform: rotate(45deg);
+
+      &:before {
+        opacity: 0;
+      }
+
+      &:after {
+        transform: rotate(90deg) translate(-0.5rem);
+      }
+    }
+  }
 }
