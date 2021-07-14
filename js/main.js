@@ -1,10 +1,13 @@
-// Toggles the show-nav class on the header when the nav-toggle button is pressed
+// Toggles the show-nav class on the header when any button/anchor with the nav-toggle
+// class is clicked
 function navBarToggling() {
-  const toggleButton = document.getElementById("nav-toggle");
   const header = document.getElementById("site-header");
+  const togglers = document.querySelectorAll(".nav-toggle");
 
-  toggleButton.addEventListener("click", () => {
-    header.classList.toggle("show-nav");
+  togglers.forEach((toggler) => {
+    toggler.addEventListener("click", () => {
+      header.classList.toggle("show-nav");
+    });
   });
 }
 
