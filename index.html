@@ -47,499 +47,508 @@
       </nav>
     </header>
 
-    <section id="opening">
-      <div id="opening-content">
-        <span class="wrapper" id="opening-header"><h1>Rolv Apneseth</h1></span>
-        <span class="wrapper"><p>Software Developer</p></span>
-      </div>
+    <main>
+      <section id="opening">
+        <div id="opening-content">
+          <span class="wrapper" id="opening-header"
+            ><h1>Rolv Apneseth</h1></span
+          >
+          <span class="wrapper"><p>Software Developer</p></span>
+        </div>
 
-      <div id="opening-scroll">
-        <a href="#about" title="About section">
-          <span>
-            Learn more
-            <img
-              id="arrow-down"
-              src="./assets/images/scroll_down.svg"
-              alt="scroll down"
-            />
-          </span>
+        <div id="opening-scroll">
+          <a href="#about" title="About section">
+            <span>
+              Learn more
+              <img
+                id="arrow-down"
+                src="./assets/images/scroll_down.svg"
+                alt="scroll down"
+              />
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section id="about">
+        <div id="about-header" class="section-header">
+          <h2>Hey, I'm Rolv.</h2>
+          <h3>
+            I'm a self-taught developer with a passion for solving problems and
+            learning new things.
+          </h3>
+          <span></span>
+        </div>
+
+        <div class="wrapper">
+          <div id="about-text">
+            <p>
+              <b>I'm very self-motivated</b> and when I'm not learning about new
+              ways to improve my code or working on a personal project (most of
+              which are on my
+              <a
+                href="https://github.com/Rolv-Apneseth"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >), I'm answering questions over on
+              <a
+                href="https://stackoverflow.com/users/14316282/rolv-apneseth"
+                target="_blank"
+                rel="noopener"
+                >Stack Overflow</a
+              >
+              to try and help people out wherever I can.
+            </p>
+
+            <p>
+              I have been teaching myself how to code and applying that
+              knowledge into projects for over a year now. I have experience
+              with both software and web app development, because to me, it is
+              the process of creating efficient and helpful products and tools
+              which is the most important, not the medium used to achieve that
+              goal. I strive to create software that can help make peoples'
+              lives easier.
+            </p>
+
+            <p>
+              <b>I love learning new things,</b> and I would love to work with
+              people who are willing to share their knowledge while we create
+              something beautiful.
+            </p>
+          </div>
+
+          <img
+            id="profile-picture"
+            src-lazy="./assets/images/profile.jpg"
+            alt="profile picture"
+          />
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <span></span>
+        </div>
+
+        <div id="skills-container">
+          <div class="skill">
+            <img src="./assets/images/python.svg" alt="" />
+            <p>Python</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/qt.svg" alt="" />
+            <p>PyQt5</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/sqlalchemy.svg" alt="" />
+            <p>SQLAlchemy</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/flask.svg" alt="" />
+            <p>Flask</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/html5.svg" alt="" />
+            <p>HTML 5</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/css3.svg" alt="" />
+            <p>CSS 3</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/javascript.svg" alt="" />
+            <p>JavaScript</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/jquery.svg" alt="" />
+            <p>JQuery</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/sass.svg" alt="" />
+            <p>SASS</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/bootstrap.svg" alt="" />
+            <p>Bootstrap</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/bash.svg" alt="" />
+            <p>Bash</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/linux.svg" alt="" />
+            <p>Linux</p>
+          </div>
+
+          <div class="skill">
+            <img src="./assets/images/git.svg" alt="" />
+            <p>Git</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -------------------------------------------->
+      <section id="projects">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <span></span>
+        </div>
+
+        <div id="projects-container">
+          <!-- Just A Tracker -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/q-7LjkoNq9g"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Just A Tracker</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>Flask</p>
+                <p>SQLAlchemy</p>
+                <p>Jinja2</p>
+                <p>SASS</p>
+                <p>JavaScript</p>
+                <p>JQuery</p>
+                <p>Bootstrap</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              A web which application allows users to track issues for different
+              projects, as well as add other users to a workspace and comment on
+              specific issues for better communication with a team. Note that
+              the live demo is hosted on Heroku and may take a minute to start
+              up on the first load.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/just-a-tracker"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+              <a
+                href="https://just-a-tracker.herokuapp.com/login"
+                target="_blank"
+                rel="noopener"
+                >Demo</a
+              >
+            </div>
+          </div>
+
+          <!-- Speed Typer -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/powSJJrZJtk"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Speed Typer</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>PyQt5</p>
+                <p>PyQtGraph</p>
+                <p>NLTK</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              This is a GUI application made using the PyQt5 library for Python.
+              With it, a user can practice getting faster at typing with almost
+              endless sources of text to type out, and even keep track of their
+              progression! I use this program daily to improve my typing speed,
+              and it has helped me go from 40 W.P.M. to around 70 W.P.M.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/speed-typer"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+            </div>
+          </div>
+
+          <!-- Pathfind Algorithm Visualiser -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/Qf5Zq8lq0pg"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Pathfind Visualiser</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>Pygame</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              A pathfinding algorithm visualiser, written in Python with the
+              help of the Pygame library. With this program you can see
+              different pathfinding algorithms in action! It also has algorithms
+              for generating different kinds of mazes so the user can see how
+              the algorithms behave under different conditions.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/pathfind-visualiser"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+            </div>
+          </div>
+
+          <!-- Hacker News Webscraper -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/bKoZ82JmaGM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Hacker News Webscraper</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>TKinter</p>
+                <p>Requests</p>
+                <p>Beautiful Soup 4</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              This program comes both as a command line tool and a TKinter GUI
+              application, and is used to display top voted articles scraped
+              from the popular
+              <a
+                href="https://news.ycombinator.com/"
+                target="_blank"
+                rel="noopener"
+                >Hacker News</a
+              >
+              website. I personally use the GUI application every day as it
+              makes it easy to keep up to date with the latest tech news!
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/hacker-news-webscraper"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+            </div>
+          </div>
+
+          <!-- Auto Folder Sort -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/1WC3oADtH6E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Auto Folder Sort</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>Unit Tests</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              A way to keep folders organised. This program, written in Python,
+              can keep several folders automatically sorted, either by file type
+              or date of last modification, depending on the users specification
+              for that specific folder.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/auto-folder-sort"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+            </div>
+          </div>
+
+          <!-- Password Checker -->
+          <div class="project">
+            <iframe
+              src-lazy="https://www.youtube-nocookie.com/embed/7GlcYeDO-2E"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+
+            <div class="project-header">
+              <h3>Password Checker</h3>
+
+              <div class="project-techs">
+                <p>Python</p>
+                <p>TKinter</p>
+                <p>SHA-1</p>
+              </div>
+            </div>
+
+            <p class="project-summary">
+              A Python program which can be used both with a GUI and as a
+              command line program. With it, users can securely check if any of
+              their personal passwords have ever been exposed in any major user
+              data leaks, making this tool extremely useful for personal privacy
+              and security reasons.
+            </p>
+
+            <div class="project-links">
+              <a
+                href="https://github.com/Rolv-Apneseth/password-checker"
+                target="_blank"
+                rel="noopener"
+                >Code</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="link-section">
+        <a
+          href="https://github.com/Rolv-Apneseth"
+          target="_blank"
+          rel="noopener"
+        >
+          <p>Check out my GitHub!</p>
+          <img src="./assets/images/github.svg" alt="GitHub Logo" />
         </a>
       </div>
-    </section>
 
-    <section id="about">
-      <div id="about-header" class="section-header">
-        <h2>Hey, I'm Rolv.</h2>
-        <h3>
-          I'm a self-taught developer with a passion for solving problems and
-          learning new things.
-        </h3>
-        <span></span>
-      </div>
+      <section id="contact">
+        <div class="section-header">
+          <h2>Get In Touch!</h2>
+          <span></span>
+        </div>
 
-      <div class="wrapper">
-        <div id="about-text">
-          <p>
-            <b>I'm very self-motivated</b> and when I'm not learning about new
-            ways to improve my code or working on a personal project (most of
-            which are on my
+        <form action="https://formspree.io/f/xvodqzpa" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" name="subject" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </section>
+
+      <footer id="footer">
+        <ul>
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener"
+              title="StackOverflow"
+              aria-label="My Stack Overflow"
+            >
+              <img src="./assets/images/stackoverflow.svg" alt="Email" />
+            </a>
+          </li>
+
+          <li>
+            <a
+              href=""
+              target="_blank"
+              rel="noopener"
+              title="LinkedIn"
+              aria-label="My LinkedIn"
+              ><img src="./assets/images/linkedin.svg" alt="LinkedIn"
+            /></a>
+          </li>
+
+          <li>
             <a
               href="https://github.com/Rolv-Apneseth"
               target="_blank"
               rel="noopener"
-              >GitHub</a
-            >), I'm answering questions over on
+              title="GitHub"
+              aria-label="My GitHub"
+              ><img src="./assets/images/github.svg" alt="GitHub"
+            /></a>
+          </li>
+
+          <li>
             <a
-              href="https://stackoverflow.com/users/14316282/rolv-apneseth"
+              href="mailto:rolv.apneseth@gmail.com"
               target="_blank"
               rel="noopener"
-              >Stack Overflow</a
+              title="Email"
+              aria-label="Email me"
             >
-            to try and help people out wherever I can.
-          </p>
+              <img src="./assets/images/email.svg" alt="Email" />
+            </a>
+          </li>
+        </ul>
 
-          <p>
-            I have been teaching myself how to code and applying that knowledge
-            into projects for over a year now. I have experience with both
-            software and web app development, because to me, it is the process
-            of creating efficient and helpful products and tools which is the
-            most important, not the medium used to achieve that goal. I strive
-            to create software that can help make peoples' lives easier.
-          </p>
+        <p>Created by <span>Rolv Apneseth</span></p>
+      </footer>
 
-          <p>
-            <b>I love learning new things,</b> and I would love to work with
-            people who are willing to share their knowledge while we create
-            something beautiful.
-          </p>
-        </div>
-
-        <img
-          id="profile-picture"
-          src-lazy="./assets/images/profile.jpg"
-          alt="profile picture"
-        />
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="section-header">
-        <h2>Skills</h2>
-        <span></span>
-      </div>
-
-      <div id="skills-container">
-        <div class="skill">
-          <img src="./assets/images/python.svg" alt="" />
-          <p>Python</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/qt.svg" alt="" />
-          <p>PyQt5</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/sqlalchemy.svg" alt="" />
-          <p>SQLAlchemy</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/flask.svg" alt="" />
-          <p>Flask</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/html5.svg" alt="" />
-          <p>HTML 5</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/css3.svg" alt="" />
-          <p>CSS 3</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/javascript.svg" alt="" />
-          <p>JavaScript</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/jquery.svg" alt="" />
-          <p>JQuery</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/sass.svg" alt="" />
-          <p>SASS</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/bootstrap.svg" alt="" />
-          <p>Bootstrap</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/bash.svg" alt="" />
-          <p>Bash</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/linux.svg" alt="" />
-          <p>Linux</p>
-        </div>
-
-        <div class="skill">
-          <img src="./assets/images/git.svg" alt="" />
-          <p>Git</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -------------------------------------------->
-    <section id="projects">
-      <div class="section-header">
-        <h2>Projects</h2>
-        <span></span>
-      </div>
-
-      <div id="projects-container">
-        <!-- Just A Tracker -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/q-7LjkoNq9g"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Just A Tracker</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>Flask</p>
-              <p>SQLAlchemy</p>
-              <p>Jinja2</p>
-              <p>SASS</p>
-              <p>JavaScript</p>
-              <p>JQuery</p>
-              <p>Bootstrap</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            A web which application allows users to track issues for different
-            projects, as well as add other users to a workspace and comment on
-            specific issues for better communication with a team. Note that the
-            live demo is hosted on Heroku and may take a minute to start up on
-            the first load.
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/just-a-tracker"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-            <a
-              href="https://just-a-tracker.herokuapp.com/login"
-              target="_blank"
-              rel="noopener"
-              >Demo</a
-            >
-          </div>
-        </div>
-
-        <!-- Speed Typer -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/powSJJrZJtk"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Speed Typer</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>PyQt5</p>
-              <p>PyQtGraph</p>
-              <p>NLTK</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            This is a GUI application made using the PyQt5 library for Python.
-            With it, a user can practice getting faster at typing with almost
-            endless sources of text to type out, and even keep track of their
-            progression! I use this program daily to improve my typing speed,
-            and it has helped me go from 40 W.P.M. to around 70 W.P.M.
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/speed-typer"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-          </div>
-        </div>
-
-        <!-- Pathfind Algorithm Visualiser -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/Qf5Zq8lq0pg"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Pathfind Visualiser</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>Pygame</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            A pathfinding algorithm visualiser, written in Python with the help
-            of the Pygame library. With this program you can see different
-            pathfinding algorithms in action! It also has algorithms for
-            generating different kinds of mazes so the user can see how the
-            algorithms behave under different conditions.
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/pathfind-visualiser"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-          </div>
-        </div>
-
-        <!-- Hacker News Webscraper -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/bKoZ82JmaGM"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Hacker News Webscraper</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>TKinter</p>
-              <p>Requests</p>
-              <p>Beautiful Soup 4</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            This program comes both as a command line tool and a TKinter GUI
-            application, and is used to display top voted articles scraped from
-            the popular
-            <a
-              href="https://news.ycombinator.com/"
-              target="_blank"
-              rel="noopener"
-              >Hacker News</a
-            >
-            website. I personally use the GUI application every day as it makes
-            it easy to keep up to date with the latest tech news!
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/hacker-news-webscraper"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-          </div>
-        </div>
-
-        <!-- Auto Folder Sort -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/1WC3oADtH6E"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Auto Folder Sort</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>Unit Tests</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            A way to keep folders organised. This program, written in Python,
-            can keep several folders automatically sorted, either by file type
-            or date of last modification, depending on the users specification
-            for that specific folder.
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/auto-folder-sort"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-          </div>
-        </div>
-
-        <!-- Password Checker -->
-        <div class="project">
-          <iframe
-            src-lazy="https://www.youtube-nocookie.com/embed/7GlcYeDO-2E"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-
-          <div class="project-header">
-            <h3>Password Checker</h3>
-
-            <div class="project-techs">
-              <p>Python</p>
-              <p>TKinter</p>
-              <p>SHA-1</p>
-            </div>
-          </div>
-
-          <p class="project-summary">
-            A Python program which can be used both with a GUI and as a command
-            line program. With it, users can securely check if any of their
-            personal passwords have ever been exposed in any major user data
-            leaks, making this tool extremely useful for personal privacy and
-            security reasons.
-          </p>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/Rolv-Apneseth/password-checker"
-              target="_blank"
-              rel="noopener"
-              >Code</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="link-section">
-      <a href="https://github.com/Rolv-Apneseth" target="_blank" rel="noopener">
-        <p>Check out my GitHub!</p>
-        <img src="./assets/images/github.svg" alt="GitHub Logo" />
-      </a>
-    </div>
-
-    <section id="contact">
-      <div class="section-header">
-        <h2>Get In Touch!</h2>
-        <span></span>
-      </div>
-
-      <form action="https://formspree.io/f/xvodqzpa" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <input id="subject" type="text" name="subject" required />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-
-        <button class="button" type="submit">Submit</button>
-      </form>
-    </section>
-
-    <footer id="footer">
-      <ul>
-        <li>
-          <a
-            href=""
-            target="_blank"
-            rel="noopener"
-            title="StackOverflow"
-            aria-label="My Stack Overflow"
-          >
-            <img src="./assets/images/stackoverflow.svg" alt="Email" />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href=""
-            target="_blank"
-            rel="noopener"
-            title="LinkedIn"
-            aria-label="My LinkedIn"
-            ><img src="./assets/images/linkedin.svg" alt="LinkedIn"
-          /></a>
-        </li>
-
-        <li>
-          <a
-            href="https://github.com/Rolv-Apneseth"
-            target="_blank"
-            rel="noopener"
-            title="GitHub"
-            aria-label="My GitHub"
-            ><img src="./assets/images/github.svg" alt="GitHub"
-          /></a>
-        </li>
-
-        <li>
-          <a
-            href="mailto:rolv.apneseth@gmail.com"
-            target="_blank"
-            rel="noopener"
-            title="Email"
-            aria-label="Email me"
-          >
-            <img src="./assets/images/email.svg" alt="Email" />
-          </a>
-        </li>
-      </ul>
-
-      <p>Created by <span>Rolv Apneseth</span></p>
-    </footer>
-
-    <script type="text/javascript" src="./js/main.js"></script>
+      <script type="text/javascript" src="./js/main.js"></script>
+    </main>
   </body>
 </html>

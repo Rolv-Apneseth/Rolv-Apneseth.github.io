@@ -175,6 +175,8 @@ html {
 }
 html body {
   overflow-x: hidden;
+  position: relative;
+  z-index: 1;
 }
 html p {
   font-size: 1.05rem;
@@ -237,13 +239,16 @@ section:nth-of-type(odd) {
   transform: translateX(0);
 }
 
+.blur {
+  filter: blur(0.75rem);
+}
+
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 1000;
   background-color: transparent;
   right: 0;
-  top: 0;
-  bottom: 0;
+  height: 100vh;
 }
 
 button {
