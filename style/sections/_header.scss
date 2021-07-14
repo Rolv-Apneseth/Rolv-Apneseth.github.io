@@ -9,7 +9,7 @@ header {
   bottom: 0;
 }
 
-#nav-toggle {
+button {
   position: relative;
   z-index: 3;
   background-color: transparent;
@@ -96,7 +96,7 @@ nav {
     transform: translateX(0);
   }
 
-  #nav-toggle {
+  button {
     span {
       transform: rotate(45deg);
 

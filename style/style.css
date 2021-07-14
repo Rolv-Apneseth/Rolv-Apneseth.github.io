@@ -246,7 +246,7 @@ header {
   bottom: 0;
 }
 
-#nav-toggle {
+button {
   position: relative;
   z-index: 3;
   background-color: transparent;
@@ -259,24 +259,24 @@ header {
   padding: 0.25rem;
   transform: translateX(-100%);
 }
-#nav-toggle span {
+button span {
   display: block;
   position: relative;
 }
-#nav-toggle span:before, #nav-toggle span:after {
+button span:before, button span:after {
   content: "";
   position: absolute;
   left: 0;
 }
-#nav-toggle span:before {
+button span:before {
   bottom: 0.5rem;
 }
-#nav-toggle span:after {
+button span:after {
   top: 0.5rem;
 }
-#nav-toggle span,
-#nav-toggle span:before,
-#nav-toggle span:after {
+button span,
+button span:before,
+button span:after {
   width: 2rem;
   height: 0.2rem;
   background-color: #f0f0f0;
@@ -319,13 +319,13 @@ nav ul li a:hover, nav ul li a:focus {
 .show-nav nav {
   transform: translateX(0);
 }
-.show-nav #nav-toggle span {
+.show-nav button span {
   transform: rotate(45deg);
 }
-.show-nav #nav-toggle span:before {
+.show-nav button span:before {
   opacity: 0;
 }
-.show-nav #nav-toggle span:after {
+.show-nav button span:after {
   transform: rotate(90deg) translate(-0.5rem);
 }
 
