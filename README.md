@@ -1,6 +1,6 @@
 # Rolv-Apneseth.github.io
 
-My developer portfolio, hosted on GitHub Pages [here](https://rolv-apneseth.github.io/)
+My developer portfolio, hosted on GitHub Pages [here](https://rolvapneseth.com/)
 
 ## Description
 
