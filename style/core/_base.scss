@@ -9,6 +9,10 @@ html {
     overflow-x: hidden;
   }
 
+  main {
+    transition: filter $navBarDuration $navBarTiming;
+  }
+
   p {
     font-size: $baseFontSize;
   }

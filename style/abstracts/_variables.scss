@@ -1,15 +1,15 @@
 // Colours
 $lightGrey: hsl(0, 0%, 55%);
 $lighterGrey: hsl(0, 0%, 79%);
-$white: hsl(0, 0%, 90%);
+$white: hsl(0, 0%, 94%);
 $baseBackgroundColour: hsl(210, 7%, 12%);
 $baseBackgroundColourLighter: hsl(210, 7%, 16%);
 $highlightColour: hsl(208, 98, 45);
 $highlightColourLighter: lighten($highlightColour, 10%);
 $highlightColourDarker: darken($highlightColour, 10%);
 // Hex to filter here: https://codepen.io/sosuke/pen/Pjoqqp
-$skillsFilter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg)
-  brightness(104%) contrast(103%) opacity(80%);
+$skillsFilter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg)
+  brightness(112%) contrast(88%);
 
 // Measurements
 $baseFontSize: 1.05rem;
@@ -51,6 +51,8 @@ $footerIconHeight: 2.4rem;
 // Animations
 $fadeInDuration: 300ms;
 $fadeInTiming: ease-in;
+$navBarDuration: 250ms;
+$navBarTiming: ease-in-out;
 $spawnDuration: 300ms;
 $spawnTiming: ease-out;
 $introBarDuration: 1000ms;

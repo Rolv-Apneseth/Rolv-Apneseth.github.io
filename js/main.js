@@ -1,3 +1,18 @@
+// Toggles the show-nav class on the header when any button/anchor with the nav-toggle
+// class is clicked. Also blurs the main element (everything else on the page).
+function navBarToggling() {
+  const main = document.querySelector("main");
+  const header = document.getElementById("site-header");
+  const togglers = document.querySelectorAll(".nav-toggle");
+
+  togglers.forEach((toggler) => {
+    toggler.addEventListener("click", () => {
+      header.classList.toggle("show-nav");
+      main.classList.toggle("main-blur");
+    });
+  });
+}
+
 // Returns false if user has the preference of reduce-motion set to reduce
 // Otherwise, retuns true (so animations can be enabled)
 function isAnimationOn() {
@@ -94,4 +109,5 @@ window.addEventListener("DOMContentLoaded", function () {
   lazyLoad();
   autoExpand();
   fullpageAnimations();
+  navBarToggling();
 });

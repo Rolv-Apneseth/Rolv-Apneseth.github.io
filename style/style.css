@@ -170,18 +170,21 @@ textarea:focus {
 }
 html {
   font-family: "roboto", sans-serif;
-  color: #e6e6e6;
+  color: #f0f0f0;
   scroll-behavior: smooth;
 }
 html body {
   overflow-x: hidden;
+}
+html main {
+  transition: filter 250ms ease-in-out;
 }
 html p {
   font-size: 1.05rem;
 }
 html a {
   text-decoration: none;
-  color: #e6e6e6;
+  color: #f0f0f0;
 }
 
 section:not(#opening) {
@@ -237,6 +240,136 @@ section:nth-of-type(odd) {
   transform: translateX(0);
 }
 
+header {
+  position: fixed;
+  z-index: 1000;
+  background-color: transparent;
+  right: 0;
+  height: 100vh;
+}
+header button {
+  position: relative;
+  z-index: 3;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 5rem;
+  position: absolute;
+  left: -1.5rem;
+  top: 2rem;
+  padding: 1.5rem 0.75rem;
+  transform: translateX(-100%);
+}
+header button:focus {
+  outline-style: dotted;
+  outline-color: #027ae3;
+}
+header button span {
+  display: block;
+  position: relative;
+}
+header button span:before, header button span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+header button span:before {
+  bottom: 0.5rem;
+}
+header button span:after {
+  top: 0.5rem;
+}
+header button span,
+header button span:before,
+header button span:after {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #f0f0f0;
+  transition: transform 250ms ease-in-out;
+}
+header nav {
+  background-color: transparent;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  height: 100%;
+  min-width: 100vw;
+  transform: translateX(100%);
+  transition-property: transform, width, height;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+}
+header nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header nav ul li + li {
+  margin-top: 2.5rem;
+}
+header nav ul li {
+  font-weight: bold;
+  font-size: 2rem;
+}
+@media (hover) {
+  header nav ul li a {
+    color: #c9c9c9;
+  }
+  header nav ul li a:hover, header nav ul li a:focus {
+    color: #f0f0f0;
+  }
+}
+
+.show-nav nav {
+  transform: translate(0);
+}
+.show-nav button span {
+  transform: rotate(45deg);
+}
+.show-nav button span:before {
+  opacity: 0;
+}
+.show-nav button span:after {
+  transform: rotate(90deg) translate(-0.5rem);
+}
+
+.main-blur {
+  filter: blur(0.75rem) brightness(55%);
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  header nav {
+    min-height: 8rem;
+    max-height: 8%;
+    transform: translateY(-100%) translateX(0);
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 9rem;
+  }
+  header nav ul li + li {
+    margin: 0 0 0 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  header nav {
+    min-height: 8rem;
+    max-height: 8%;
+    transform: translateY(-100%) translateX(0);
+  }
+  header nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 9rem;
+  }
+  header nav ul li + li {
+    margin: 0 0 0 5rem;
+  }
+}
 #opening {
   display: flex;
   flex-direction: column;
@@ -435,7 +568,7 @@ section:nth-of-type(odd) {
   text-align: center;
 }
 #skills #skills-container .skill img {
-  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+  filter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg) brightness(112%) contrast(88%);
   width: 100%;
   margin-bottom: 0.5rem;
   transition: transform 400ms;
@@ -500,7 +633,7 @@ section:nth-of-type(odd) {
 .link-section a img {
   visibility: hidden;
   height: 3.2rem;
-  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+  filter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg) brightness(112%) contrast(88%);
   transition: transform 150ms ease-in;
   transform: translateY(-60%) scale(0.1);
 }
@@ -578,7 +711,7 @@ section:nth-of-type(odd) {
   transition-timing-function: ease-in;
 }
 #projects .project .project-links a:hover, #projects .project .project-links a:active, #projects .project .project-links a:focus {
-  color: #e6e6e6;
+  color: #f0f0f0;
   background-color: #027ae3;
   border-color: #1c94fd;
   transform: translateY(-2%);
@@ -630,7 +763,7 @@ section:nth-of-type(odd) {
   margin-right: auto;
 }
 #contact form button:hover, #contact form button:active, #contact form button:focus {
-  color: #e6e6e6;
+  color: #f0f0f0;
   background-color: #027ae3;
   border-color: #1c94fd;
   transform: translateY(-2%);
@@ -705,7 +838,7 @@ section:nth-of-type(odd) {
 }
 #footer ul li img {
   height: 100%;
-  filter: invert(95%) sepia(0%) saturate(7471%) hue-rotate(111deg) brightness(104%) contrast(103%) opacity(80%);
+  filter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg) brightness(112%) contrast(88%);
   transition: transform 150ms;
 }
 #footer ul li img:hover {
