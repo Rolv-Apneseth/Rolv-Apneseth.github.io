@@ -1,3 +1,10 @@
+// Small function to set the correct vh to work with mobile devices
+function fixVh() {
+  vh = window.innerHeight * 0.01;
+
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+}
+
 // Toggles the show-nav class on the header when any button/anchor with the nav-toggle
 // class is clicked. Also blurs the main element (everything else on the page).
 function navBarToggling() {
@@ -110,4 +117,5 @@ window.addEventListener("DOMContentLoaded", function () {
   autoExpand();
   fullpageAnimations();
   navBarToggling();
+  fixVh();
 });
