@@ -314,7 +314,7 @@ header nav ul li {
   font-weight: bold;
   font-size: 2rem;
 }
-@media (hover) {
+@media (any-hover: hover) {
   header nav ul li a {
     color: #c9c9c9;
   }
@@ -376,6 +376,7 @@ header nav ul li {
   align-items: center;
   justify-content: space-between;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%;
   background: url("../assets/images/background.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -577,7 +578,7 @@ header nav ul li {
   font-size: 0.9975rem;
   font-weight: bold;
 }
-@media (hover) {
+@media (any-hover: hover) {
   #skills #skills-container .skill p {
     opacity: 0;
     transform: translateY(100%);

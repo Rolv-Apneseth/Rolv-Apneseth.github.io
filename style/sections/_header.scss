@@ -85,7 +85,7 @@ header {
 
         // If device supports hover, change the colours of the nav links to provide a
         // hover effect
-        @media (hover) {
+        @media (any-hover: hover) {
           a {
             color: $lighterGrey;
 

@@ -55,7 +55,7 @@
       }
 
       // If device supports hover, apply some simple animations
-      @media (hover) {
+      @media (any-hover: hover) {
         p {
           opacity: 0;
           transform: translateY(100%);
