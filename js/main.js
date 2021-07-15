@@ -8,7 +8,7 @@ function navBarToggling() {
   togglers.forEach((toggler) => {
     toggler.addEventListener("click", () => {
       header.classList.toggle("show-nav");
-      main.classList.toggle("blur");
+      main.classList.toggle("main-blur");
     });
   });
 }

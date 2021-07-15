@@ -7,8 +7,10 @@ html {
 
   body {
     overflow-x: hidden;
-    position: relative;
-    z-index: 1;
+  }
+
+  main {
+    transition: filter $navBarDuration $navBarTiming;
   }
 
   p {
@@ -73,9 +75,4 @@ section:nth-of-type(odd) {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-// Simple blur filter, used to blur everything but navbar using js
-.blur {
-  filter: blur(0.75rem);
 }

@@ -175,8 +175,9 @@ html {
 }
 html body {
   overflow-x: hidden;
-  position: relative;
-  z-index: 1;
+}
+html main {
+  transition: filter 250ms ease-in-out;
 }
 html p {
   font-size: 1.05rem;
@@ -239,10 +240,6 @@ section:nth-of-type(odd) {
   transform: translateX(0);
 }
 
-.blur {
-  filter: blur(0.75rem);
-}
-
 header {
   position: fixed;
   z-index: 1000;
@@ -289,15 +286,17 @@ button span:after {
 }
 
 nav {
-  background-color: #027ae3;
+  background-color: transparent;
   position: absolute;
   z-index: 2;
   top: 0;
   right: 0;
   height: 100%;
-  min-width: 20rem;
+  min-width: 100vw;
   transform: translateX(100%);
-  transition: transform 250ms ease-in-out;
+  transition-property: transform, width, height;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
 }
 nav ul {
   height: 100%;
@@ -305,10 +304,9 @@ nav ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vh 0;
 }
 nav ul li + li {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 nav ul li {
   font-weight: bold;
@@ -316,7 +314,7 @@ nav ul li {
 }
 @media (hover) {
   nav ul li a {
-    color: #e3e3e3;
+    color: #c9c9c9;
   }
   nav ul li a:hover, nav ul li a:focus {
     color: #f0f0f0;
@@ -324,7 +322,7 @@ nav ul li {
 }
 
 .show-nav nav {
-  transform: translateX(0);
+  transform: translate(0);
 }
 .show-nav button span {
   transform: rotate(45deg);
@@ -336,6 +334,40 @@ nav ul li {
   transform: rotate(90deg) translate(-0.5rem);
 }
 
+.main-blur {
+  filter: blur(0.75rem) brightness(55%);
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  nav {
+    min-height: 8rem;
+    max-height: 8%;
+    transform: translateY(-100%) translateX(0);
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 8rem;
+  }
+  nav ul li + li {
+    margin: 0 0 0 5rem;
+  }
+}
+@media (min-width: 1200px) {
+  nav {
+    min-height: 8rem;
+    max-height: 8%;
+    transform: translateY(-100%) translateX(0);
+  }
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 8rem;
+  }
+  nav ul li + li {
+    margin: 0 0 0 5rem;
+  }
+}
 #opening {
   display: flex;
   flex-direction: column;

@@ -52,15 +52,17 @@ button {
 }
 
 nav {
-  background-color: $highlightColour;
+  background-color: transparent;
   position: absolute;
   z-index: 2;
   top: 0;
   right: 0;
   height: 100%;
-  min-width: 20rem;
+  min-width: 100vw;
   transform: translateX(100%);
-  transition: transform $navBarDuration $navBarTiming;
+  transition-property: transform, width, height;
+  transition-duration: $navBarDuration;
+  transition-timing-function: $navBarTiming;
 
   ul {
     height: 100%;
@@ -68,10 +70,9 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10vh 0;
 
     li + li {
-      margin-top: 1.5rem;
+      margin-top: 2.5rem;
     }
 
     li {
@@ -82,7 +83,7 @@ nav {
       // hover effect
       @media (hover) {
         a {
-          color: $darkerWhite;
+          color: $lighterGrey;
 
           &:hover,
           &:focus {
@@ -94,9 +95,10 @@ nav {
   }
 }
 
+// TOGGLEABLE CLASSES
 .show-nav {
   nav {
-    transform: translateX(0);
+    transform: translate(0);
   }
 
   button {
@@ -112,4 +114,36 @@ nav {
       }
     }
   }
+}
+// Simple blur filter, used to blur everything but navbar using js
+.main-blur {
+  filter: blur(0.75rem) brightness(55%);
+}
+
+// MIXIN FOR MEDIA QUERIES
+@mixin horizontalLayout {
+  nav {
+    min-height: 8rem;
+    max-height: 8%;
+    transform: translateY(-100%) translateX(0);
+
+    ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 8rem;
+
+      li + li {
+        margin: 0 0 0 5rem;
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+@include desktopSmall {
+  @include horizontalLayout;
+}
+
+@include bigScreens {
+  @include horizontalLayout;
 }
