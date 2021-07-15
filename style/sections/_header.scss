@@ -17,8 +17,13 @@ header {
     position: absolute;
     left: -1.5rem;
     top: 2rem;
-    padding: 0.25rem;
+    padding: 1.5rem 0.75rem;
     transform: translateX(-100%);
+
+    &:focus {
+      outline-style: dotted;
+      outline-color: $highlightColour;
+    }
 
     span {
       display: block;
@@ -131,7 +136,7 @@ header {
       ul {
         flex-direction: row;
         justify-content: flex-end;
-        margin-right: 8rem;
+        margin-right: 9rem;
 
         li + li {
           margin: 0 0 0 5rem;

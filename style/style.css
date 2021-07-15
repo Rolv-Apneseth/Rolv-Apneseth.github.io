@@ -257,8 +257,12 @@ header button {
   position: absolute;
   left: -1.5rem;
   top: 2rem;
-  padding: 0.25rem;
+  padding: 1.5rem 0.75rem;
   transform: translateX(-100%);
+}
+header button:focus {
+  outline-style: dotted;
+  outline-color: #027ae3;
 }
 header button span {
   display: block;
@@ -345,7 +349,7 @@ header nav ul li {
   header nav ul {
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 8rem;
+    margin-right: 9rem;
   }
   header nav ul li + li {
     margin: 0 0 0 5rem;
@@ -360,7 +364,7 @@ header nav ul li {
   header nav ul {
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 8rem;
+    margin-right: 9rem;
   }
   header nav ul li + li {
     margin: 0 0 0 5rem;
