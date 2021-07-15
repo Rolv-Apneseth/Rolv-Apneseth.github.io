@@ -247,8 +247,7 @@ header {
   right: 0;
   height: 100vh;
 }
-
-button {
+header button {
   position: relative;
   z-index: 3;
   background-color: transparent;
@@ -256,36 +255,35 @@ button {
   cursor: pointer;
   font-size: 5rem;
   position: absolute;
-  left: -0.75rem;
-  top: 1rem;
+  left: -1.5rem;
+  top: 2rem;
   padding: 0.25rem;
   transform: translateX(-100%);
 }
-button span {
+header button span {
   display: block;
   position: relative;
 }
-button span:before, button span:after {
+header button span:before, header button span:after {
   content: "";
   position: absolute;
   left: 0;
 }
-button span:before {
+header button span:before {
   bottom: 0.5rem;
 }
-button span:after {
+header button span:after {
   top: 0.5rem;
 }
-button span,
-button span:before,
-button span:after {
+header button span,
+header button span:before,
+header button span:after {
   width: 2rem;
   height: 0.2rem;
   background-color: #f0f0f0;
   transition: transform 250ms ease-in-out;
 }
-
-nav {
+header nav {
   background-color: transparent;
   position: absolute;
   z-index: 2;
@@ -298,25 +296,25 @@ nav {
   transition-duration: 250ms;
   transition-timing-function: ease-in-out;
 }
-nav ul {
+header nav ul {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-nav ul li + li {
+header nav ul li + li {
   margin-top: 2.5rem;
 }
-nav ul li {
+header nav ul li {
   font-weight: bold;
   font-size: 2rem;
 }
 @media (hover) {
-  nav ul li a {
+  header nav ul li a {
     color: #c9c9c9;
   }
-  nav ul li a:hover, nav ul li a:focus {
+  header nav ul li a:hover, header nav ul li a:focus {
     color: #f0f0f0;
   }
 }
@@ -339,32 +337,32 @@ nav ul li {
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {
-  nav {
+  header nav {
     min-height: 8rem;
     max-height: 8%;
     transform: translateY(-100%) translateX(0);
   }
-  nav ul {
+  header nav ul {
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 8rem;
   }
-  nav ul li + li {
+  header nav ul li + li {
     margin: 0 0 0 5rem;
   }
 }
 @media (min-width: 1200px) {
-  nav {
+  header nav {
     min-height: 8rem;
     max-height: 8%;
     transform: translateY(-100%) translateX(0);
   }
-  nav ul {
+  header nav ul {
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 8rem;
   }
-  nav ul li + li {
+  header nav ul li + li {
     margin: 0 0 0 5rem;
   }
 }
