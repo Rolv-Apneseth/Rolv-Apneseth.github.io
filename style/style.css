@@ -314,7 +314,7 @@ header nav ul li {
   font-weight: bold;
   font-size: 2rem;
 }
-@media (any-hover: hover) {
+@media (hover: hover) {
   header nav ul li a {
     color: #c9c9c9;
   }
@@ -578,7 +578,7 @@ header nav ul li {
   font-size: 0.9975rem;
   font-weight: bold;
 }
-@media (any-hover: hover) {
+@media (hover: hover) {
   #skills #skills-container .skill p {
     opacity: 0;
     transform: translateY(100%);
