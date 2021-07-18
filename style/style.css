@@ -818,38 +818,41 @@ header nav ul li {
   width: 100%;
 }
 
-#footer {
+footer {
   background-color: #1c1f21;
   padding: 2.8rem 0;
 }
-#footer > * {
+footer > * {
   width: 100%;
 }
-#footer ul {
+footer ul {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 2.4rem;
 }
-#footer ul li {
+footer ul li {
   height: 100%;
 }
-#footer ul li + li {
+footer ul li + li {
   margin-left: 1.4rem;
 }
-#footer ul li a img {
+footer ul li a img {
   height: 100%;
   filter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg) brightness(112%) contrast(88%);
   transition: transform 150ms;
 }
-#footer ul li a:hover img {
+footer ul li a:hover img {
   transform: translateY(-11%) scale(1.1);
 }
-#footer p {
+footer p {
   font-weight: bold;
   margin-top: 2.8rem;
   text-align: center;
 }
-#footer p span {
+footer p span {
   color: #1c94fd;
+}
+footer p a {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */
