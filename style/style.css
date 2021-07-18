@@ -494,6 +494,9 @@ header nav ul li {
 #about .wrapper #about-text p {
   margin-bottom: 1rem;
 }
+#about .wrapper #about-text p a {
+  text-decoration: underline;
+}
 @media (min-width: 1025px) and (max-width: 1199px) {
   #about .wrapper {
     grid-template-columns: 70% 1fr;
