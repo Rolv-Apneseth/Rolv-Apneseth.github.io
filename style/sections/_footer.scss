@@ -22,13 +22,17 @@
         margin-left: 1.4rem;
       }
 
-      img {
-        height: 100%;
-        filter: $skillsFilter;
-        transition: transform $buttonHoverDuration;
+      a {
+        img {
+          height: 100%;
+          filter: $skillsFilter;
+          transition: transform $buttonHoverDuration;
+        }
 
         &:hover {
-          transform: translateY(-15%) scale(1.07);
+          img {
+            transform: translateY(-11%) scale(1.1);
+          }
         }
       }
     }

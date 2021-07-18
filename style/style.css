@@ -837,13 +837,13 @@ header nav ul li {
 #footer ul li + li {
   margin-left: 1.4rem;
 }
-#footer ul li img {
+#footer ul li a img {
   height: 100%;
   filter: invert(100%) sepia(6%) saturate(168%) hue-rotate(277deg) brightness(112%) contrast(88%);
   transition: transform 150ms;
 }
-#footer ul li img:hover {
-  transform: translateY(-15%) scale(1.07);
+#footer ul li a:hover img {
+  transform: translateY(-11%) scale(1.1);
 }
 #footer p {
   font-weight: bold;
